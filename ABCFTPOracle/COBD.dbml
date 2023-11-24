@@ -1,0 +1,423 @@
+﻿<?xml version="1.0" encoding="utf-8"?><Database Name="EnvioFTPOracle" Class="COBDDataContext" xmlns="http://schemas.microsoft.com/linqtosql/dbml/2007">
+  <Connection Mode="AppSettings" ConnectionString="Data Source=192.168.11.31;Initial Catalog=EnvioFTPOracle;Persist Security Info=True;User ID=envio_ftp" SettingsObjectName="ABCFTPOracle.Properties.Settings" SettingsPropertyName="EnvioFTPOracleConnectionString2" Provider="System.Data.SqlClient" />
+  <Table Name="dbo.OrigenDatos" Member="OrigenDatos">
+    <Type Name="OrigenDatos">
+      <Column Name="IdOrigenDatos" Type="System.Int32" DbType="Int NOT NULL IDENTITY" IsPrimaryKey="true" IsDbGenerated="true" CanBeNull="false" />
+      <Column Name="IdLaboratorio" Type="System.String" DbType="NVarChar(250)" CanBeNull="true" />
+      <Column Name="Tipo" Type="System.String" DbType="NVarChar(150)" CanBeNull="true" />
+      <Column Name="Extension" Type="System.String" DbType="NVarChar(50)" CanBeNull="true" />
+      <Column Name="Destino" Type="System.String" DbType="NVarChar(1500)" CanBeNull="true" />
+      <Column Name="DestinoFTPPaso" Type="System.String" DbType="NVarChar(150)" CanBeNull="true" />
+      <Column Name="IPFTP" Type="System.String" DbType="NVarChar(150)" CanBeNull="true" />
+      <Column Name="UserFTP" Type="System.String" DbType="NVarChar(150)" CanBeNull="true" />
+      <Column Name="PassFTP" Type="System.String" DbType="NVarChar(150)" CanBeNull="true" />
+      <Column Name="DirectorioFTP" Type="System.String" DbType="NVarChar(150)" CanBeNull="true" />
+      <Column Name="FTPSeguro" Type="System.Boolean" DbType="Bit" CanBeNull="true" />
+      <Column Name="Puerto" Type="System.String" DbType="NVarChar(150)" CanBeNull="true" />
+      <Column Name="AdjuntarArchivo" Type="System.Boolean" DbType="Bit" CanBeNull="true" />
+      <Column Name="EnvioPDF" Type="System.String" DbType="NVarChar(150)" CanBeNull="true" />
+      <Column Name="ModoActivo" Type="System.Boolean" DbType="Bit" CanBeNull="true" />
+      <Association Name="OrigenDatos_CtlCorreos" Member="CtlCorreos" ThisKey="IdOrigenDatos" OtherKey="IdOrigenDatos" Type="CtlCorreos" />
+    </Type>
+  </Table>
+  <Table Name="dbo.CtlCorreos" Member="CtlCorreos">
+    <Type Name="CtlCorreos">
+      <Column Name="IdCorreos" Type="System.Int32" DbType="Int NOT NULL IDENTITY" IsPrimaryKey="true" IsDbGenerated="true" CanBeNull="false" />
+      <Column Name="IdOrigenDatos" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="Correo" Type="System.String" DbType="NVarChar(250)" CanBeNull="true" />
+      <Association Name="OrigenDatos_CtlCorreos" Member="OrigenDatos" ThisKey="IdOrigenDatos" OtherKey="IdOrigenDatos" Type="OrigenDatos" IsForeignKey="true" />
+    </Type>
+  </Table>
+  <Table Name="dbo.[Log]" Member="Log">
+    <Type Name="Log">
+      <Column Name="IdLog" Type="System.Guid" DbType="UniqueIdentifier NOT NULL" IsPrimaryKey="true" CanBeNull="false" />
+      <Column Name="Titulo" Type="System.String" DbType="NVarChar(250)" CanBeNull="true" />
+      <Column Name="Tipo" Type="System.String" DbType="NVarChar(150)" CanBeNull="true" />
+      <Column Name="ArchivoOracle" Type="System.String" DbType="NVarChar(250)" CanBeNull="true" />
+      <Column Name="DestinoOneDrive" Type="System.String" DbType="NVarChar(250)" CanBeNull="true" />
+      <Column Name="DestinoFTP" Type="System.String" DbType="NVarChar(250)" CanBeNull="true" />
+      <Column Name="Estatus" Type="System.String" DbType="NVarChar(150)" CanBeNull="true" />
+      <Column Name="DescripcionError" Type="System.String" DbType="NVarChar(1550)" CanBeNull="true" />
+      <Column Name="Fecha" Type="System.DateTime" DbType="DateTime" CanBeNull="true" />
+    </Type>
+  </Table>
+  <Table Name="dbo.FTP" Member="FTP">
+    <Type Name="FTP">
+      <Column Name="Id" Type="System.Int32" DbType="Int NOT NULL IDENTITY" IsPrimaryKey="true" IsDbGenerated="true" CanBeNull="false" />
+      <Column Name="Origen" Type="System.String" DbType="NVarChar(1550)" CanBeNull="true" />
+      <Column Name="DestinoLocal" Type="System.String" DbType="NVarChar(1550)" CanBeNull="true" />
+      <Column Name="IPFTP" Type="System.String" DbType="NVarChar(550)" CanBeNull="true" />
+      <Column Name="UserFTP" Type="System.String" DbType="NVarChar(550)" CanBeNull="true" />
+      <Column Name="PassFTP" Type="System.String" DbType="NVarChar(550)" CanBeNull="true" />
+      <Column Name="DirectorioFTP" Type="System.String" DbType="NVarChar(1550)" CanBeNull="true" />
+      <Column Name="Extensiones" Type="System.String" DbType="NVarChar(1550)" CanBeNull="true" />
+      <Column Name="FTPSeguro" Type="System.Boolean" DbType="Bit" CanBeNull="true" />
+      <Column Name="Puerto" Type="System.String" DbType="NVarChar(550)" CanBeNull="true" />
+      <Association Name="FTP_CtlCorreosFTP" Member="CtlCorreosFTP" ThisKey="Id" OtherKey="IdFTP" Type="CtlCorreosFTP" />
+    </Type>
+  </Table>
+  <Table Name="dbo.CtlCorreosFTP" Member="CtlCorreosFTP">
+    <Type Name="CtlCorreosFTP">
+      <Column Name="IdCorreoFTP" Type="System.Int32" DbType="Int NOT NULL IDENTITY" IsPrimaryKey="true" IsDbGenerated="true" CanBeNull="false" />
+      <Column Name="IdFTP" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="Correo" Type="System.String" DbType="NVarChar(250)" CanBeNull="true" />
+      <Association Name="FTP_CtlCorreosFTP" Member="FTP" ThisKey="IdFTP" OtherKey="Id" Type="FTP" IsForeignKey="true" />
+    </Type>
+  </Table>
+  <Table Name="dbo.Notificaciones" Member="Notificaciones">
+    <Type Name="Notificaciones">
+      <Column Name="Id" Type="System.Int32" DbType="Int NOT NULL IDENTITY" IsPrimaryKey="true" IsDbGenerated="true" CanBeNull="false" />
+      <Column Name="Correo" Type="System.String" DbType="NVarChar(150)" CanBeNull="true" />
+    </Type>
+  </Table>
+  <Table Name="dbo.CtlCorreosFanasa" Member="CtlCorreosFanasa">
+    <Type Name="CtlCorreosFanasa">
+      <Column Name="IdCorreos" Type="System.Int32" DbType="Int NOT NULL IDENTITY" IsPrimaryKey="true" IsDbGenerated="true" CanBeNull="false" />
+      <Column Name="IdOrigenDatosFanasa" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="Correo" Type="System.String" DbType="NVarChar(250)" CanBeNull="true" />
+      <Association Name="OrigenDatosFanasa_CtlCorreosFanasa" Member="OrigenDatosFanasa" ThisKey="IdOrigenDatosFanasa" OtherKey="IdOrigenDatos" Type="OrigenDatosFanasa" IsForeignKey="true" />
+    </Type>
+  </Table>
+  <Table Name="dbo.ConfiguracionOrigen" Member="ConfiguracionOrigen">
+    <Type Name="ConfiguracionOrigen">
+      <Column Name="uiRegistroOrigen" Type="System.Int32" DbType="Int NOT NULL IDENTITY" IsPrimaryKey="true" IsDbGenerated="true" CanBeNull="false" />
+      <Column Name="sOrigen" Type="System.String" DbType="VarChar(250)" CanBeNull="true" />
+      <Column Name="sCorreo" Type="System.String" DbType="VarChar(250)" CanBeNull="true" />
+      <Column Name="sDestinatario" Type="System.String" DbType="VarChar(250)" CanBeNull="true" />
+      <Column Name="sAsunto" Type="System.String" DbType="VarChar(250)" CanBeNull="true" />
+      <Column Name="sDireccionIP" Type="System.String" DbType="VarChar(250)" CanBeNull="true" />
+      <Column Name="iPuerto" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="sPassword" Type="System.String" DbType="VarChar(250)" CanBeNull="true" />
+      <Column Name="userConexion" Type="System.String" DbType="VarChar(100)" CanBeNull="true" />
+      <Association Name="ConfiguracionOrigen_OrigenDatosFanasa" Member="OrigenDatosFanasa" ThisKey="uiRegistroOrigen" OtherKey="iRegistroConfigOrigen" Type="OrigenDatosFanasa" />
+    </Type>
+  </Table>
+  <Table Name="dbo.LogFanasa" Member="LogFanasa">
+    <Type Name="LogFanasa">
+      <Column Name="IdLog" Type="System.Guid" DbType="UniqueIdentifier NOT NULL" IsPrimaryKey="true" CanBeNull="false" />
+      <Column Name="Titulo" Type="System.String" DbType="NVarChar(250)" CanBeNull="true" />
+      <Column Name="Tipo" Type="System.String" DbType="NVarChar(150)" CanBeNull="true" />
+      <Column Name="ArchivoOracle" Type="System.String" DbType="NVarChar(250)" CanBeNull="true" />
+      <Column Name="DestinoOneDrive" Type="System.String" DbType="NVarChar(250)" CanBeNull="true" />
+      <Column Name="DestinoFTP" Type="System.String" DbType="NVarChar(250)" CanBeNull="true" />
+      <Column Name="Estatus" Type="System.String" DbType="NVarChar(150)" CanBeNull="true" />
+      <Column Name="DescripcionError" Type="System.String" DbType="NVarChar(1550)" CanBeNull="true" />
+      <Column Name="Fecha" Type="System.DateTime" DbType="DateTime" CanBeNull="true" />
+    </Type>
+  </Table>
+  <Table Name="dbo.DepuracionFiles" Member="DepuracionFiles">
+    <Type Name="DepuracionFiles">
+      <Column Name="IdDepuracion" Type="System.Int32" DbType="Int NOT NULL IDENTITY" IsPrimaryKey="true" IsDbGenerated="true" CanBeNull="false" />
+      <Column Name="RutaDepuracion" Type="System.String" DbType="NVarChar(200)" CanBeNull="true" />
+      <Column Name="DiasFiles" Type="System.Int32" DbType="Int" CanBeNull="true" />
+    </Type>
+  </Table>
+  <Table Name="dbo.OrigenDatosBenavides" Member="OrigenDatosBenavides">
+    <Type Name="OrigenDatosBenavides">
+      <Column Name="IdOrigenDatos" Type="System.Int32" DbType="Int NOT NULL IDENTITY" IsPrimaryKey="true" IsDbGenerated="true" CanBeNull="false" />
+      <Column Name="Field1" Type="System.String" DbType="NVarChar(250)" CanBeNull="true" />
+      <Column Name="Field2" Type="System.String" DbType="NVarChar(250)" CanBeNull="true" />
+      <Column Name="Field3" Type="System.String" DbType="NVarChar(250)" CanBeNull="true" />
+      <Column Name="Extension" Type="System.String" DbType="NVarChar(50)" CanBeNull="true" />
+      <Column Name="Destino" Type="System.String" DbType="NVarChar(1500)" CanBeNull="true" />
+      <Column Name="iRegistroConfigOrigen" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Association Name="OrigenDatosBenavides_CtlCorreosBenavides" Member="CtlCorreosBenavides" ThisKey="IdOrigenDatos" OtherKey="IdOrigenDatosBenavides" Type="CtlCorreosBenavides" />
+      <Association Name="ConfiguracionOrigenBenavides_OrigenDatosBenavides" Member="ConfiguracionOrigenBenavides" ThisKey="iRegistroConfigOrigen" OtherKey="uiRegistroOrigen" Type="ConfiguracionOrigenBenavides" IsForeignKey="true" />
+    </Type>
+  </Table>
+  <Table Name="dbo.CtlCorreosBenavides" Member="CtlCorreosBenavides">
+    <Type Name="CtlCorreosBenavides">
+      <Column Name="IdCorreos" Type="System.Int32" DbType="Int NOT NULL IDENTITY" IsPrimaryKey="true" IsDbGenerated="true" CanBeNull="false" />
+      <Column Name="IdOrigenDatosBenavides" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="Correo" Type="System.String" DbType="NVarChar(250)" CanBeNull="true" />
+      <Association Name="OrigenDatosBenavides_CtlCorreosBenavides" Member="OrigenDatosBenavides" ThisKey="IdOrigenDatosBenavides" OtherKey="IdOrigenDatos" Type="OrigenDatosBenavides" IsForeignKey="true" />
+    </Type>
+  </Table>
+  <Table Name="dbo.ConfiguracionOrigenBenavides" Member="ConfiguracionOrigenBenavides">
+    <Type Name="ConfiguracionOrigenBenavides">
+      <Column Name="uiRegistroOrigen" Type="System.Int32" DbType="Int NOT NULL IDENTITY" IsPrimaryKey="true" IsDbGenerated="true" CanBeNull="false" />
+      <Column Name="sOrigen" Type="System.String" DbType="VarChar(250)" CanBeNull="true" />
+      <Column Name="sCorreo" Type="System.String" DbType="VarChar(250)" CanBeNull="true" />
+      <Column Name="sDestinatario" Type="System.String" DbType="VarChar(250)" CanBeNull="true" />
+      <Column Name="sAsunto" Type="System.String" DbType="VarChar(250)" CanBeNull="true" />
+      <Column Name="sDireccionIP" Type="System.String" DbType="VarChar(250)" CanBeNull="true" />
+      <Column Name="iPuerto" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="sPassword" Type="System.String" DbType="VarChar(250)" CanBeNull="true" />
+      <Association Name="ConfiguracionOrigenBenavides_OrigenDatosBenavides" Member="OrigenDatosBenavides" ThisKey="uiRegistroOrigen" OtherKey="iRegistroConfigOrigen" Type="OrigenDatosBenavides" />
+    </Type>
+  </Table>
+  <Table Name="dbo.LogBenavides" Member="LogBenavides">
+    <Type Name="LogBenavides">
+      <Column Name="IdLog" Type="System.Guid" DbType="UniqueIdentifier NOT NULL" IsPrimaryKey="true" CanBeNull="false" />
+      <Column Name="Titulo" Type="System.String" DbType="NVarChar(250)" CanBeNull="true" />
+      <Column Name="Tipo" Type="System.String" DbType="NVarChar(150)" CanBeNull="true" />
+      <Column Name="ArchivoOracle" Type="System.String" DbType="NVarChar(250)" CanBeNull="true" />
+      <Column Name="OrigenBenavides" Type="System.String" DbType="NVarChar(250)" CanBeNull="true" />
+      <Column Name="DestinoFTP" Type="System.String" DbType="NVarChar(250)" CanBeNull="true" />
+      <Column Name="Estatus" Type="System.String" DbType="NVarChar(150)" CanBeNull="true" />
+      <Column Name="DescripcionError" Type="System.String" DbType="NVarChar(1550)" CanBeNull="true" />
+      <Column Name="Fecha" Type="System.DateTime" DbType="DateTime" CanBeNull="true" />
+    </Type>
+  </Table>
+  <Table Name="dbo.filesBenavides" Member="filesBenavides">
+    <Type Name="filesBenavides">
+      <Column Name="uiRegistroFile" Type="System.Int32" DbType="Int NOT NULL IDENTITY" IsPrimaryKey="true" IsDbGenerated="true" CanBeNull="false" />
+      <Column Name="sNombreArchivo" Type="System.String" DbType="VarChar(MAX)" CanBeNull="true" />
+    </Type>
+  </Table>
+  <Table Name="dbo.CtlCorreosEtiquetas" Member="CtlCorreosEtiquetas">
+    <Type Name="CtlCorreosEtiquetas">
+      <Column Name="IdCorreos" Type="System.Int32" DbType="Int NOT NULL IDENTITY" IsPrimaryKey="true" IsDbGenerated="true" CanBeNull="false" />
+      <Column Name="IdOrigenDatosEtiquetas" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="Correo" Type="System.String" DbType="NVarChar(250)" CanBeNull="true" />
+      <Association Name="OrigenDatosEtiquetas_CtlCorreosEtiquetas" Member="OrigenDatosEtiquetas" ThisKey="IdOrigenDatosEtiquetas" OtherKey="IdOrigenDatos" Type="OrigenDatosEtiquetas" IsForeignKey="true" />
+    </Type>
+  </Table>
+  <Table Name="dbo.ConfiguracionOrigenEtiquetas" Member="ConfiguracionOrigenEtiquetas">
+    <Type Name="ConfiguracionOrigenEtiquetas">
+      <Column Name="uiRegistroOrigen" Type="System.Int32" DbType="Int NOT NULL IDENTITY" IsPrimaryKey="true" IsDbGenerated="true" CanBeNull="false" />
+      <Column Name="sOrigen" Type="System.String" DbType="VarChar(250)" CanBeNull="true" />
+      <Column Name="sCorreo" Type="System.String" DbType="VarChar(250)" CanBeNull="true" />
+      <Column Name="sDestinatario" Type="System.String" DbType="VarChar(250)" CanBeNull="true" />
+      <Column Name="sAsunto" Type="System.String" DbType="VarChar(250)" CanBeNull="true" />
+      <Column Name="sDireccionIP" Type="System.String" DbType="VarChar(250)" CanBeNull="true" />
+      <Column Name="iPuerto" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="sPassword" Type="System.String" DbType="VarChar(250)" CanBeNull="true" />
+      <Association Name="ConfiguracionOrigenEtiquetas_OrigenDatosEtiquetas" Member="OrigenDatosEtiquetas" ThisKey="uiRegistroOrigen" OtherKey="iRegistroConfigOrigen" Type="OrigenDatosEtiquetas" />
+    </Type>
+  </Table>
+  <Table Name="dbo.LogFTP" Member="LogFTP">
+    <Type Name="LogFTP">
+      <Column Name="IdLogFTP" Type="System.Guid" DbType="UniqueIdentifier NOT NULL" IsPrimaryKey="true" CanBeNull="false" />
+      <Column Name="Titulo" Type="System.String" DbType="NVarChar(250)" CanBeNull="true" />
+      <Column Name="Tipo" Type="System.String" DbType="NVarChar(250)" CanBeNull="true" />
+      <Column Name="Archivo" Type="System.String" DbType="NVarChar(250)" CanBeNull="true" />
+      <Column Name="Origen" Type="System.String" DbType="NVarChar(350)" CanBeNull="true" />
+      <Column Name="DestinoLocal" Type="System.String" DbType="NVarChar(350)" CanBeNull="true" />
+      <Column Name="Estatus" Type="System.String" DbType="NVarChar(350)" CanBeNull="true" />
+      <Column Name="DescripcionError" Type="System.String" DbType="NVarChar(1550)" CanBeNull="true" />
+      <Column Name="Fecha" Type="System.DateTime" DbType="DateTime" CanBeNull="true" />
+    </Type>
+  </Table>
+  <Table Name="dbo.OrigenDatosEtiquetas" Member="OrigenDatosEtiquetas">
+    <Type Name="OrigenDatosEtiquetas">
+      <Column Name="IdOrigenDatos" Type="System.Int32" DbType="Int NOT NULL IDENTITY" IsPrimaryKey="true" IsDbGenerated="true" CanBeNull="false" />
+      <Column Name="Field1" Type="System.String" DbType="NVarChar(250)" CanBeNull="true" />
+      <Column Name="Field2" Type="System.String" DbType="NVarChar(250)" CanBeNull="true" />
+      <Column Name="Field3" Type="System.String" DbType="NVarChar(250)" CanBeNull="true" />
+      <Column Name="Extension" Type="System.String" DbType="NVarChar(50)" CanBeNull="true" />
+      <Column Name="Destino" Type="System.String" DbType="NVarChar(1500)" CanBeNull="true" />
+      <Column Name="iRegistroConfigOrigen" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Association Name="OrigenDatosEtiquetas_CtlCorreosEtiquetas" Member="CtlCorreosEtiquetas" ThisKey="IdOrigenDatos" OtherKey="IdOrigenDatosEtiquetas" Type="CtlCorreosEtiquetas" />
+      <Association Name="ConfiguracionOrigenEtiquetas_OrigenDatosEtiquetas" Member="ConfiguracionOrigenEtiquetas" ThisKey="iRegistroConfigOrigen" OtherKey="uiRegistroOrigen" Type="ConfiguracionOrigenEtiquetas" IsForeignKey="true" />
+    </Type>
+  </Table>
+  <Table Name="dbo.LogEtiquetas" Member="LogEtiquetas">
+    <Type Name="LogEtiquetas">
+      <Column Name="IdLog" Type="System.Guid" DbType="UniqueIdentifier NOT NULL" IsPrimaryKey="true" CanBeNull="false" />
+      <Column Name="Titulo" Type="System.String" DbType="NVarChar(250)" CanBeNull="true" />
+      <Column Name="Tipo" Type="System.String" DbType="NVarChar(150)" CanBeNull="true" />
+      <Column Name="ArchivoOracle" Type="System.String" DbType="NVarChar(250)" CanBeNull="true" />
+      <Column Name="DestinoOneDrive" Type="System.String" DbType="VarChar(250)" CanBeNull="true" />
+      <Column Name="Estatus" Type="System.String" DbType="NVarChar(150)" CanBeNull="true" />
+      <Column Name="DescripcionError" Type="System.String" DbType="NVarChar(1550)" CanBeNull="true" />
+      <Column Name="Fecha" Type="System.DateTime" DbType="DateTime" CanBeNull="true" />
+    </Type>
+  </Table>
+  <Table Name="dbo.CtlCorreos3WM" Member="CtlCorreos3WM">
+    <Type Name="CtlCorreos3WM">
+      <Column Name="IdCorreos" Type="System.Int32" DbType="Int NOT NULL IDENTITY" IsPrimaryKey="true" IsDbGenerated="true" CanBeNull="false" />
+      <Column Name="IdOrigenDatos3WM" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="Correo" Type="System.String" DbType="NVarChar(250)" CanBeNull="true" />
+      <Association Name="OrigenDatos3WM_CtlCorreos3WM" Member="OrigenDatos3WM" ThisKey="IdOrigenDatos3WM" OtherKey="IdOrigenDatos" Type="OrigenDatos3WM" IsForeignKey="true" />
+    </Type>
+  </Table>
+  <Table Name="dbo.Log3WM" Member="Log3WM">
+    <Type Name="Log3WM">
+      <Column Name="IdLog" Type="System.Guid" DbType="UniqueIdentifier NOT NULL" IsPrimaryKey="true" CanBeNull="false" />
+      <Column Name="Titulo" Type="System.String" DbType="NVarChar(250)" CanBeNull="true" />
+      <Column Name="Tipo" Type="System.String" DbType="NVarChar(150)" CanBeNull="true" />
+      <Column Name="ArchivoOracle" Type="System.String" DbType="NVarChar(250)" CanBeNull="true" />
+      <Column Name="DestinoOneDrive" Type="System.String" DbType="NVarChar(250)" CanBeNull="true" />
+      <Column Name="DestinoFTP" Type="System.String" DbType="NVarChar(250)" CanBeNull="true" />
+      <Column Name="Estatus" Type="System.String" DbType="NVarChar(150)" CanBeNull="true" />
+      <Column Name="DescripcionError" Type="System.String" DbType="NVarChar(1550)" CanBeNull="true" />
+      <Column Name="Fecha" Type="System.DateTime" DbType="DateTime" CanBeNull="true" />
+    </Type>
+  </Table>
+  <Table Name="dbo.OrigenDatos3WM" Member="OrigenDatos3WM">
+    <Type Name="OrigenDatos3WM">
+      <Column Name="IdOrigenDatos" Type="System.Int32" DbType="Int NOT NULL IDENTITY" IsPrimaryKey="true" IsDbGenerated="true" CanBeNull="false" />
+      <Column Name="Field1" Type="System.String" DbType="NVarChar(250)" CanBeNull="true" />
+      <Column Name="Field2" Type="System.String" DbType="NVarChar(250)" CanBeNull="true" />
+      <Column Name="Field3" Type="System.String" DbType="NVarChar(250)" CanBeNull="true" />
+      <Column Name="Extension" Type="System.String" DbType="NVarChar(50)" CanBeNull="true" />
+      <Column Name="Destino" Type="System.String" DbType="NVarChar(1500)" CanBeNull="true" />
+      <Column Name="DestinoFTPPaso" Type="System.String" DbType="NVarChar(150)" CanBeNull="true" />
+      <Column Name="IPFTP" Type="System.String" DbType="NVarChar(150)" CanBeNull="true" />
+      <Column Name="UserFTP" Type="System.String" DbType="NVarChar(150)" CanBeNull="true" />
+      <Column Name="PassFTP" Type="System.String" DbType="NVarChar(150)" CanBeNull="true" />
+      <Column Name="DirectorioFTP" Type="System.String" DbType="NVarChar(150)" CanBeNull="true" />
+      <Column Name="FTPSeguro" Type="System.Boolean" DbType="Bit" CanBeNull="true" />
+      <Column Name="Puerto" Type="System.String" DbType="NVarChar(150)" CanBeNull="true" />
+      <Column Name="AdjuntarArchivo" Type="System.Boolean" DbType="Bit" CanBeNull="true" />
+      <Column Name="EnvioPDF" Type="System.String" DbType="NVarChar(150)" CanBeNull="true" />
+      <Column Name="ModoActivo" Type="System.Boolean" DbType="Bit" CanBeNull="true" />
+      <Column Name="iRegistroConfigOrigen" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="bFANASA" Type="System.Boolean" DbType="Bit" CanBeNull="true" />
+      <Column Name="bFESA" Type="System.Boolean" DbType="Bit" CanBeNull="true" />
+      <Association Name="OrigenDatos3WM_CtlCorreos3WM" Member="CtlCorreos3WM" ThisKey="IdOrigenDatos" OtherKey="IdOrigenDatos3WM" Type="CtlCorreos3WM" />
+      <Association Name="ConfiguracionOrigen3WM_OrigenDatos3WM" Member="ConfiguracionOrigen3WM" ThisKey="iRegistroConfigOrigen" OtherKey="uiRegistroOrigen" Type="ConfiguracionOrigen3WM" IsForeignKey="true" />
+    </Type>
+  </Table>
+  <Table Name="dbo.ConfiguracionOrigen3WM" Member="ConfiguracionOrigen3WM">
+    <Type Name="ConfiguracionOrigen3WM">
+      <Column Name="uiRegistroOrigen" Type="System.Int32" DbType="Int NOT NULL IDENTITY" IsPrimaryKey="true" IsDbGenerated="true" CanBeNull="false" />
+      <Column Name="sOrigen" Type="System.String" DbType="VarChar(250)" CanBeNull="true" />
+      <Column Name="sCorreo" Type="System.String" DbType="VarChar(250)" CanBeNull="true" />
+      <Column Name="sDestinatario" Type="System.String" DbType="VarChar(250)" CanBeNull="true" />
+      <Column Name="sAsunto" Type="System.String" DbType="VarChar(250)" CanBeNull="true" />
+      <Column Name="sDireccionIP" Type="System.String" DbType="VarChar(250)" CanBeNull="true" />
+      <Column Name="iPuerto" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="sPassword" Type="System.String" DbType="VarChar(250)" CanBeNull="true" />
+      <Association Name="ConfiguracionOrigen3WM_OrigenDatos3WM" Member="OrigenDatos3WM" ThisKey="uiRegistroOrigen" OtherKey="iRegistroConfigOrigen" Type="OrigenDatos3WM" />
+    </Type>
+  </Table>
+  <Table Name="dbo.OrigenDatosCarvajalFANASA" Member="OrigenDatosCarvajalFANASA">
+    <Type Name="OrigenDatosCarvajalFANASA">
+      <Column Name="IdOrigenDatos" Type="System.Int32" DbType="Int NOT NULL IDENTITY" IsPrimaryKey="true" IsDbGenerated="true" CanBeNull="false" />
+      <Column Name="Field1" Type="System.String" DbType="NVarChar(250)" CanBeNull="true" />
+      <Column Name="Field2" Type="System.String" DbType="NVarChar(250)" CanBeNull="true" />
+      <Column Name="Field3" Type="System.String" DbType="NVarChar(250)" CanBeNull="true" />
+      <Column Name="Extension" Type="System.String" DbType="NVarChar(50)" CanBeNull="true" />
+      <Column Name="Destino" Type="System.String" DbType="NVarChar(1500)" CanBeNull="true" />
+      <Column Name="DestinoRespaldo" Type="System.String" DbType="NVarChar(150)" CanBeNull="true" />
+      <Column Name="IPFTP" Type="System.String" DbType="NVarChar(150)" CanBeNull="true" />
+      <Column Name="UserFTP" Type="System.String" DbType="NVarChar(150)" CanBeNull="true" />
+      <Column Name="PassFTP" Type="System.String" DbType="NVarChar(150)" CanBeNull="true" />
+      <Column Name="Puerto" Type="System.String" DbType="NVarChar(150)" CanBeNull="true" />
+      <Column Name="iRegistroConfigOrigen" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="userConexion" Type="System.String" DbType="VarChar(50)" CanBeNull="true" />
+      <Column Name="ModoActivo" Type="System.Boolean" DbType="Bit" CanBeNull="true" />
+      <Column Name="DirectorioFTP" Type="System.String" DbType="NVarChar(150)" CanBeNull="true" />
+      <Association Name="OrigenDatosCarvajalFANASA_CtlCorreosCarvajalFANASA" Member="CtlCorreosCarvajalFANASA" ThisKey="IdOrigenDatos" OtherKey="IdOrigenDatos" Type="CtlCorreosCarvajalFANASA" />
+      <Association Name="ConfiguracionOrigenCarvajalFANASA_OrigenDatosCarvajalFANASA" Member="ConfiguracionOrigenCarvajalFANASA" ThisKey="iRegistroConfigOrigen" OtherKey="uiRegistroOrigen" Type="ConfiguracionOrigenCarvajalFANASA" IsForeignKey="true" />
+    </Type>
+  </Table>
+  <Table Name="dbo.ConfiguracionOrigenCarvajalFANASA" Member="ConfiguracionOrigenCarvajalFANASA">
+    <Type Name="ConfiguracionOrigenCarvajalFANASA">
+      <Column Name="uiRegistroOrigen" Type="System.Int32" DbType="Int NOT NULL IDENTITY" IsPrimaryKey="true" IsDbGenerated="true" CanBeNull="false" />
+      <Column Name="sOrigen" Type="System.String" DbType="VarChar(250)" CanBeNull="true" />
+      <Column Name="sCorreo" Type="System.String" DbType="VarChar(250)" CanBeNull="true" />
+      <Column Name="sDestinatario" Type="System.String" DbType="VarChar(250)" CanBeNull="true" />
+      <Column Name="sAsunto" Type="System.String" DbType="VarChar(250)" CanBeNull="true" />
+      <Column Name="sDireccionIP" Type="System.String" DbType="VarChar(250)" CanBeNull="true" />
+      <Column Name="iPuerto" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="sPassword" Type="System.String" DbType="VarChar(250)" CanBeNull="true" />
+      <Association Name="ConfiguracionOrigenCarvajalFANASA_OrigenDatosCarvajalFANASA" Member="OrigenDatosCarvajalFANASA" ThisKey="uiRegistroOrigen" OtherKey="iRegistroConfigOrigen" Type="OrigenDatosCarvajalFANASA" />
+    </Type>
+  </Table>
+  <Table Name="dbo.CtlCorreosCarvajalFANASA" Member="CtlCorreosCarvajalFANASA">
+    <Type Name="CtlCorreosCarvajalFANASA">
+      <Column Name="IdCorreos" Type="System.Int32" DbType="Int NOT NULL IDENTITY" IsPrimaryKey="true" IsDbGenerated="true" CanBeNull="false" />
+      <Column Name="IdOrigenDatos" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="Correo" Type="System.String" DbType="NVarChar(250)" CanBeNull="true" />
+      <Association Name="OrigenDatosCarvajalFANASA_CtlCorreosCarvajalFANASA" Member="OrigenDatosCarvajalFANASA" ThisKey="IdOrigenDatos" OtherKey="IdOrigenDatos" Type="OrigenDatosCarvajalFANASA" IsForeignKey="true" />
+    </Type>
+  </Table>
+  <Table Name="dbo.LogCarvajalFANASA" Member="LogCarvajalFANASA">
+    <Type Name="LogCarvajalFANASA">
+      <Column Name="IdLog" Type="System.Guid" DbType="UniqueIdentifier NOT NULL" IsPrimaryKey="true" CanBeNull="false" />
+      <Column Name="Titulo" Type="System.String" DbType="NVarChar(250)" CanBeNull="true" />
+      <Column Name="Tipo" Type="System.String" DbType="NVarChar(150)" CanBeNull="true" />
+      <Column Name="ArchivoOracle" Type="System.String" DbType="NVarChar(250)" CanBeNull="true" />
+      <Column Name="DestinoOneDrive" Type="System.String" DbType="NVarChar(250)" CanBeNull="true" />
+      <Column Name="DestinoFTP" Type="System.String" DbType="NVarChar(250)" CanBeNull="true" />
+      <Column Name="Estatus" Type="System.String" DbType="NVarChar(150)" CanBeNull="true" />
+      <Column Name="DescripcionError" Type="System.String" DbType="NVarChar(1550)" CanBeNull="true" />
+      <Column Name="Fecha" Type="System.DateTime" DbType="DateTime" CanBeNull="true" />
+    </Type>
+  </Table>
+  <Table Name="dbo.OrigenDatosCarvajalFESA" Member="OrigenDatosCarvajalFESA">
+    <Type Name="OrigenDatosCarvajalFESA">
+      <Column Name="IdOrigenDatos" Type="System.Int32" DbType="Int NOT NULL IDENTITY" IsPrimaryKey="true" IsDbGenerated="true" CanBeNull="false" />
+      <Column Name="Field1" Type="System.String" DbType="NVarChar(250)" CanBeNull="true" />
+      <Column Name="Field2" Type="System.String" DbType="NVarChar(250)" CanBeNull="true" />
+      <Column Name="Field3" Type="System.String" DbType="NVarChar(250)" CanBeNull="true" />
+      <Column Name="Extension" Type="System.String" DbType="NVarChar(50)" CanBeNull="true" />
+      <Column Name="Destino" Type="System.String" DbType="NVarChar(1500)" CanBeNull="true" />
+      <Column Name="DestinoRespaldo" Type="System.String" DbType="NVarChar(150)" CanBeNull="true" />
+      <Column Name="IPFTP" Type="System.String" DbType="NVarChar(150)" CanBeNull="true" />
+      <Column Name="UserFTP" Type="System.String" DbType="NVarChar(150)" CanBeNull="true" />
+      <Column Name="PassFTP" Type="System.String" DbType="NVarChar(150)" CanBeNull="true" />
+      <Column Name="DirectorioFTP" Type="System.String" DbType="NVarChar(150)" CanBeNull="true" />
+      <Column Name="Puerto" Type="System.String" DbType="NVarChar(150)" CanBeNull="true" />
+      <Column Name="iRegistroConfigOrigen" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="userConexion" Type="System.String" DbType="VarChar(50)" CanBeNull="true" />
+      <Column Name="ModoActivo" Type="System.Boolean" DbType="Bit" CanBeNull="true" />
+      <Association Name="OrigenDatosCarvajalFESA_CtlCorreosCarvajalFESA" Member="CtlCorreosCarvajalFESA" ThisKey="IdOrigenDatos" OtherKey="IdOrigenDatos" Type="CtlCorreosCarvajalFESA" />
+      <Association Name="ConfiguracionOrigenCarvajalFESA_OrigenDatosCarvajalFESA" Member="ConfiguracionOrigenCarvajalFESA" ThisKey="iRegistroConfigOrigen" OtherKey="uiRegistroOrigen" Type="ConfiguracionOrigenCarvajalFESA" IsForeignKey="true" />
+    </Type>
+  </Table>
+  <Table Name="dbo.ConfiguracionOrigenCarvajalFESA" Member="ConfiguracionOrigenCarvajalFESA">
+    <Type Name="ConfiguracionOrigenCarvajalFESA">
+      <Column Name="uiRegistroOrigen" Type="System.Int32" DbType="Int NOT NULL IDENTITY" IsPrimaryKey="true" IsDbGenerated="true" CanBeNull="false" />
+      <Column Name="sOrigen" Type="System.String" DbType="VarChar(250)" CanBeNull="true" />
+      <Column Name="sCorreo" Type="System.String" DbType="VarChar(250)" CanBeNull="true" />
+      <Column Name="sDestinatario" Type="System.String" DbType="VarChar(250)" CanBeNull="true" />
+      <Column Name="sAsunto" Type="System.String" DbType="VarChar(250)" CanBeNull="true" />
+      <Column Name="sDireccionIP" Type="System.String" DbType="VarChar(250)" CanBeNull="true" />
+      <Column Name="iPuerto" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="sPassword" Type="System.String" DbType="VarChar(250)" CanBeNull="true" />
+      <Association Name="ConfiguracionOrigenCarvajalFESA_OrigenDatosCarvajalFESA" Member="OrigenDatosCarvajalFESA" ThisKey="uiRegistroOrigen" OtherKey="iRegistroConfigOrigen" Type="OrigenDatosCarvajalFESA" />
+    </Type>
+  </Table>
+  <Table Name="dbo.CtlCorreosCarvajalFESA" Member="CtlCorreosCarvajalFESA">
+    <Type Name="CtlCorreosCarvajalFESA">
+      <Column Name="IdCorreos" Type="System.Int32" DbType="Int NOT NULL IDENTITY" IsPrimaryKey="true" IsDbGenerated="true" CanBeNull="false" />
+      <Column Name="IdOrigenDatos" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="Correo" Type="System.String" DbType="NVarChar(250)" CanBeNull="true" />
+      <Association Name="OrigenDatosCarvajalFESA_CtlCorreosCarvajalFESA" Member="OrigenDatosCarvajalFESA" ThisKey="IdOrigenDatos" OtherKey="IdOrigenDatos" Type="OrigenDatosCarvajalFESA" IsForeignKey="true" />
+    </Type>
+  </Table>
+  <Table Name="dbo.LogCarvajalFESA" Member="LogCarvajalFESA">
+    <Type Name="LogCarvajalFESA">
+      <Column Name="IdLog" Type="System.Guid" DbType="UniqueIdentifier NOT NULL" IsPrimaryKey="true" CanBeNull="false" />
+      <Column Name="Titulo" Type="System.String" DbType="NVarChar(250)" CanBeNull="true" />
+      <Column Name="Tipo" Type="System.String" DbType="NVarChar(150)" CanBeNull="true" />
+      <Column Name="ArchivoOracle" Type="System.String" DbType="NVarChar(250)" CanBeNull="true" />
+      <Column Name="DestinoOneDrive" Type="System.String" DbType="NVarChar(250)" CanBeNull="true" />
+      <Column Name="DestinoFTP" Type="System.String" DbType="NVarChar(250)" CanBeNull="true" />
+      <Column Name="Estatus" Type="System.String" DbType="NVarChar(150)" CanBeNull="true" />
+      <Column Name="DescripcionError" Type="System.String" DbType="NVarChar(1550)" CanBeNull="true" />
+      <Column Name="Fecha" Type="System.DateTime" DbType="DateTime" CanBeNull="true" />
+    </Type>
+  </Table>
+  <Table Name="dbo.OrigenDatosFanasa" Member="OrigenDatosFanasa">
+    <Type Name="OrigenDatosFanasa">
+      <Column Name="IdOrigenDatos" Type="System.Int32" DbType="Int NOT NULL IDENTITY" IsPrimaryKey="true" IsDbGenerated="true" CanBeNull="false" />
+      <Column Name="Field1" Type="System.String" DbType="NVarChar(250)" CanBeNull="true" />
+      <Column Name="Field2" Type="System.String" DbType="NVarChar(250)" CanBeNull="true" />
+      <Column Name="Field3" Type="System.String" DbType="NVarChar(250)" CanBeNull="true" />
+      <Column Name="Extension" Type="System.String" DbType="NVarChar(50)" CanBeNull="true" />
+      <Column Name="Destino" Type="System.String" DbType="NVarChar(1500)" CanBeNull="true" />
+      <Column Name="DestinoFTPPaso" Type="System.String" DbType="NVarChar(150)" CanBeNull="true" />
+      <Column Name="IPFTP" Type="System.String" DbType="NVarChar(150)" CanBeNull="true" />
+      <Column Name="UserFTP" Type="System.String" DbType="NVarChar(150)" CanBeNull="true" />
+      <Column Name="PassFTP" Type="System.String" DbType="NVarChar(150)" CanBeNull="true" />
+      <Column Name="DirectorioFTP" Type="System.String" DbType="NVarChar(150)" CanBeNull="true" />
+      <Column Name="FTPSeguro" Type="System.Boolean" DbType="Bit" CanBeNull="true" />
+      <Column Name="Puerto" Type="System.String" DbType="NVarChar(150)" CanBeNull="true" />
+      <Column Name="AdjuntarArchivo" Type="System.Boolean" DbType="Bit" CanBeNull="true" />
+      <Column Name="EnvioPDF" Type="System.String" DbType="NVarChar(150)" CanBeNull="true" />
+      <Column Name="ModoActivo" Type="System.Boolean" DbType="Bit" CanBeNull="true" />
+      <Column Name="iRegistroConfigOrigen" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="bBenavides" Type="System.Boolean" DbType="Bit" CanBeNull="true" />
+      <Column Name="bSupply" Type="System.Boolean" DbType="Bit" CanBeNull="true" />
+      <Column Name="bCarvajalFANASA" Type="System.Boolean" DbType="Bit" CanBeNull="true" />
+      <Column Name="bCarvajalFESA" Type="System.Boolean" DbType="Bit" CanBeNull="true" />
+      <Association Name="OrigenDatosFanasa_CtlCorreosFanasa" Member="CtlCorreosFanasa" ThisKey="IdOrigenDatos" OtherKey="IdOrigenDatosFanasa" Type="CtlCorreosFanasa" />
+      <Association Name="ConfiguracionOrigen_OrigenDatosFanasa" Member="ConfiguracionOrigen" ThisKey="iRegistroConfigOrigen" OtherKey="uiRegistroOrigen" Type="ConfiguracionOrigen" IsForeignKey="true" />
+    </Type>
+  </Table>
+</Database>

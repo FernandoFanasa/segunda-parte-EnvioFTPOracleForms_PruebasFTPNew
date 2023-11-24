@@ -1,0 +1,101 @@
+C:\Users\dario.plata\Documents\Visual Studio 2015\Projects\ABCFTPOracle\ABCFTPOracle\bin\Debug\ABCFTPOracle.exe.config
+C:\Users\dario.plata\Documents\Visual Studio 2015\Projects\ABCFTPOracle\ABCFTPOracle\bin\Debug\ABCFTPOracle.exe.manifest
+C:\Users\dario.plata\Documents\Visual Studio 2015\Projects\ABCFTPOracle\ABCFTPOracle\bin\Debug\ABCFTPOracle.application
+C:\Users\dario.plata\Documents\Visual Studio 2015\Projects\ABCFTPOracle\ABCFTPOracle\bin\Debug\ABCFTPOracle.exe
+C:\Users\dario.plata\Documents\Visual Studio 2015\Projects\ABCFTPOracle\ABCFTPOracle\bin\Debug\ABCFTPOracle.pdb
+C:\Users\dario.plata\Documents\Visual Studio 2015\Projects\ABCFTPOracle\ABCFTPOracle\obj\Debug\ABCFTPOracle.csprojResolveAssemblyReference.cache
+C:\Users\dario.plata\Documents\Visual Studio 2015\Projects\ABCFTPOracle\ABCFTPOracle\obj\Debug\ABCFTPOracle.Form1.resources
+C:\Users\dario.plata\Documents\Visual Studio 2015\Projects\ABCFTPOracle\ABCFTPOracle\obj\Debug\ABCFTPOracle.Form2.resources
+C:\Users\dario.plata\Documents\Visual Studio 2015\Projects\ABCFTPOracle\ABCFTPOracle\obj\Debug\ABCFTPOracle.Form3.resources
+C:\Users\dario.plata\Documents\Visual Studio 2015\Projects\ABCFTPOracle\ABCFTPOracle\obj\Debug\ABCFTPOracle.Form4.resources
+C:\Users\dario.plata\Documents\Visual Studio 2015\Projects\ABCFTPOracle\ABCFTPOracle\obj\Debug\ABCFTPOracle.Form5.resources
+C:\Users\dario.plata\Documents\Visual Studio 2015\Projects\ABCFTPOracle\ABCFTPOracle\obj\Debug\ABCFTPOracle.Properties.Resources.resources
+C:\Users\dario.plata\Documents\Visual Studio 2015\Projects\ABCFTPOracle\ABCFTPOracle\obj\Debug\ABCFTPOracle.csproj.GenerateResource.Cache
+C:\Users\dario.plata\Documents\Visual Studio 2015\Projects\ABCFTPOracle\ABCFTPOracle\obj\Debug\ABCFTPOracle.exe.manifest
+C:\Users\dario.plata\Documents\Visual Studio 2015\Projects\ABCFTPOracle\ABCFTPOracle\obj\Debug\ABCFTPOracle.application
+C:\Users\dario.plata\Documents\Visual Studio 2015\Projects\ABCFTPOracle\ABCFTPOracle\obj\Debug\ABCFTPOracle.exe
+C:\Users\dario.plata\Documents\Visual Studio 2015\Projects\ABCFTPOracle\ABCFTPOracle\obj\Debug\ABCFTPOracle.pdb
+C:\Users\dario.plata\Documents\TI\Visual Studio 2015\ABCFTPOracle\ABCFTPOracle\bin\Debug\ABCFTPOracle.exe.config
+C:\Users\dario.plata\Documents\TI\Visual Studio 2015\ABCFTPOracle\ABCFTPOracle\obj\Debug\ABCFTPOracle.exe
+C:\Users\dario.plata\Documents\TI\Visual Studio 2015\ABCFTPOracle\ABCFTPOracle\obj\Debug\ABCFTPOracle.pdb
+C:\Users\dario.plata\Documents\TI\Visual Studio 2015\ABCFTPOracle\ABCFTPOracle\bin\Debug\ABCFTPOracle.exe.manifest
+C:\Users\dario.plata\Documents\TI\Visual Studio 2015\ABCFTPOracle\ABCFTPOracle\bin\Debug\ABCFTPOracle.application
+C:\Users\dario.plata\Documents\TI\Visual Studio 2015\ABCFTPOracle\ABCFTPOracle\bin\Debug\ABCFTPOracle.exe
+C:\Users\dario.plata\Documents\TI\Visual Studio 2015\ABCFTPOracle\ABCFTPOracle\bin\Debug\ABCFTPOracle.pdb
+C:\Users\dario.plata\Documents\TI\Visual Studio 2015\ABCFTPOracle\ABCFTPOracle\obj\Debug\ABCFTPOracle.csprojResolveAssemblyReference.cache
+C:\Users\dario.plata\Documents\TI\Visual Studio 2015\ABCFTPOracle\ABCFTPOracle\obj\Debug\ABCFTPOracle.Form1.resources
+C:\Users\dario.plata\Documents\TI\Visual Studio 2015\ABCFTPOracle\ABCFTPOracle\obj\Debug\ABCFTPOracle.Form2.resources
+C:\Users\dario.plata\Documents\TI\Visual Studio 2015\ABCFTPOracle\ABCFTPOracle\obj\Debug\ABCFTPOracle.Form3.resources
+C:\Users\dario.plata\Documents\TI\Visual Studio 2015\ABCFTPOracle\ABCFTPOracle\obj\Debug\ABCFTPOracle.Form4.resources
+C:\Users\dario.plata\Documents\TI\Visual Studio 2015\ABCFTPOracle\ABCFTPOracle\obj\Debug\ABCFTPOracle.Form5.resources
+C:\Users\dario.plata\Documents\TI\Visual Studio 2015\ABCFTPOracle\ABCFTPOracle\obj\Debug\ABCFTPOracle.Properties.Resources.resources
+C:\Users\dario.plata\Documents\TI\Visual Studio 2015\ABCFTPOracle\ABCFTPOracle\obj\Debug\ABCFTPOracle.csproj.GenerateResource.Cache
+C:\Users\dario.plata\Documents\TI\Visual Studio 2015\ABCFTPOracle\ABCFTPOracle\obj\Debug\ABCFTPOracle.exe.manifest
+C:\Users\dario.plata\Documents\TI\Visual Studio 2015\ABCFTPOracle\ABCFTPOracle\obj\Debug\ABCFTPOracle.application
+C:\Users\diana.montano\Documents\Proyectos_INLOD\Movimiento_Archivos\ABCFTPOracle\ABCFTPOracle\bin\Debug\Database1.mdf
+C:\Users\diana.montano\Documents\Proyectos_INLOD\Movimiento_Archivos\ABCFTPOracle\ABCFTPOracle\bin\Debug\Database1_log.ldf
+C:\Users\diana.montano\Documents\Proyectos_INLOD\Movimiento_Archivos\ABCFTPOracle\ABCFTPOracle\bin\Debug\ABCFTPOracle.exe.config
+C:\Users\diana.montano\Documents\Proyectos_INLOD\Movimiento_Archivos\ABCFTPOracle\ABCFTPOracle\bin\Debug\ABCFTPOracle.exe.manifest
+C:\Users\diana.montano\Documents\Proyectos_INLOD\Movimiento_Archivos\ABCFTPOracle\ABCFTPOracle\bin\Debug\ABCFTPOracle.application
+C:\Users\diana.montano\Documents\Proyectos_INLOD\Movimiento_Archivos\ABCFTPOracle\ABCFTPOracle\bin\Debug\ABCFTPOracle.exe
+C:\Users\diana.montano\Documents\Proyectos_INLOD\Movimiento_Archivos\ABCFTPOracle\ABCFTPOracle\bin\Debug\ABCFTPOracle.pdb
+C:\Users\diana.montano\Documents\Proyectos_INLOD\Movimiento_Archivos\ABCFTPOracle\ABCFTPOracle\bin\Debug\EntityFramework.dll
+C:\Users\diana.montano\Documents\Proyectos_INLOD\Movimiento_Archivos\ABCFTPOracle\ABCFTPOracle\bin\Debug\EntityFramework.SqlServer.dll
+C:\Users\diana.montano\Documents\Proyectos_INLOD\Movimiento_Archivos\ABCFTPOracle\ABCFTPOracle\bin\Debug\EntityFramework.xml
+C:\Users\diana.montano\Documents\Proyectos_INLOD\Movimiento_Archivos\ABCFTPOracle\ABCFTPOracle\bin\Debug\EntityFramework.SqlServer.xml
+C:\Users\diana.montano\Documents\Proyectos_INLOD\Movimiento_Archivos\ABCFTPOracle\ABCFTPOracle\obj\Debug\ABCFTPOracle.CorreosOracleRenovado.resources
+C:\Users\diana.montano\Documents\Proyectos_INLOD\Movimiento_Archivos\ABCFTPOracle\ABCFTPOracle\obj\Debug\ABCFTPOracle.Form1.resources
+C:\Users\diana.montano\Documents\Proyectos_INLOD\Movimiento_Archivos\ABCFTPOracle\ABCFTPOracle\obj\Debug\ABCFTPOracle.Form2.resources
+C:\Users\diana.montano\Documents\Proyectos_INLOD\Movimiento_Archivos\ABCFTPOracle\ABCFTPOracle\obj\Debug\ABCFTPOracle.Form3.resources
+C:\Users\diana.montano\Documents\Proyectos_INLOD\Movimiento_Archivos\ABCFTPOracle\ABCFTPOracle\obj\Debug\ABCFTPOracle.Form4.resources
+C:\Users\diana.montano\Documents\Proyectos_INLOD\Movimiento_Archivos\ABCFTPOracle\ABCFTPOracle\obj\Debug\ABCFTPOracle.Form5.resources
+C:\Users\diana.montano\Documents\Proyectos_INLOD\Movimiento_Archivos\ABCFTPOracle\ABCFTPOracle\obj\Debug\ABCFTPOracle.OracleRenovado.resources
+C:\Users\diana.montano\Documents\Proyectos_INLOD\Movimiento_Archivos\ABCFTPOracle\ABCFTPOracle\obj\Debug\ABCFTPOracle.Origen.resources
+C:\Users\diana.montano\Documents\Proyectos_INLOD\Movimiento_Archivos\ABCFTPOracle\ABCFTPOracle\obj\Debug\ABCFTPOracle.Properties.Resources.resources
+C:\Users\diana.montano\Documents\Proyectos_INLOD\Movimiento_Archivos\ABCFTPOracle\ABCFTPOracle\obj\Debug\ABCFTPOracle.csproj.GenerateResource.Cache
+C:\Users\diana.montano\Documents\Proyectos_INLOD\Movimiento_Archivos\ABCFTPOracle\ABCFTPOracle\obj\Debug\ABCFTPOracle.exe.manifest
+C:\Users\diana.montano\Documents\Proyectos_INLOD\Movimiento_Archivos\ABCFTPOracle\ABCFTPOracle\obj\Debug\ABCFTPOracle.application
+C:\Users\diana.montano\Documents\Proyectos_INLOD\Movimiento_Archivos\ABCFTPOracle\ABCFTPOracle\obj\Debug\ABCFTPOracle.exe
+C:\Users\diana.montano\Documents\Proyectos_INLOD\Movimiento_Archivos\ABCFTPOracle\ABCFTPOracle\obj\Debug\ABCFTPOracle.pdb
+C:\Users\diana.montano\Documents\Proyectos FANAFESA\Movimiento_Archivos\ABCFTPOracle\ABCFTPOracle\bin\Debug\Database1.mdf
+C:\Users\diana.montano\Documents\Proyectos FANAFESA\Movimiento_Archivos\ABCFTPOracle\ABCFTPOracle\bin\Debug\Database1_log.ldf
+C:\Users\diana.montano\Documents\Proyectos FANAFESA\Movimiento_Archivos\ABCFTPOracle\ABCFTPOracle\bin\Debug\ABCFTPOracle.exe.config
+C:\Users\diana.montano\Documents\Proyectos FANAFESA\Movimiento_Archivos\ABCFTPOracle\ABCFTPOracle\bin\Debug\ABCFTPOracle.exe.manifest
+C:\Users\diana.montano\Documents\Proyectos FANAFESA\Movimiento_Archivos\ABCFTPOracle\ABCFTPOracle\bin\Debug\ABCFTPOracle.application
+C:\Users\diana.montano\Documents\Proyectos FANAFESA\Movimiento_Archivos\ABCFTPOracle\ABCFTPOracle\bin\Debug\ABCFTPOracle.exe
+C:\Users\diana.montano\Documents\Proyectos FANAFESA\Movimiento_Archivos\ABCFTPOracle\ABCFTPOracle\bin\Debug\ABCFTPOracle.pdb
+C:\Users\diana.montano\Documents\Proyectos FANAFESA\Movimiento_Archivos\ABCFTPOracle\ABCFTPOracle\bin\Debug\EntityFramework.dll
+C:\Users\diana.montano\Documents\Proyectos FANAFESA\Movimiento_Archivos\ABCFTPOracle\ABCFTPOracle\bin\Debug\EntityFramework.SqlServer.dll
+C:\Users\diana.montano\Documents\Proyectos FANAFESA\Movimiento_Archivos\ABCFTPOracle\ABCFTPOracle\bin\Debug\EntityFramework.xml
+C:\Users\diana.montano\Documents\Proyectos FANAFESA\Movimiento_Archivos\ABCFTPOracle\ABCFTPOracle\bin\Debug\EntityFramework.SqlServer.xml
+C:\Users\diana.montano\Documents\Proyectos FANAFESA\Movimiento_Archivos\ABCFTPOracle\ABCFTPOracle\obj\Debug\ABCFTPOracle.Atenea.resources
+C:\Users\diana.montano\Documents\Proyectos FANAFESA\Movimiento_Archivos\ABCFTPOracle\ABCFTPOracle\obj\Debug\ABCFTPOracle.Benavides.resources
+C:\Users\diana.montano\Documents\Proyectos FANAFESA\Movimiento_Archivos\ABCFTPOracle\ABCFTPOracle\obj\Debug\ABCFTPOracle.CarvajalFANASA.resources
+C:\Users\diana.montano\Documents\Proyectos FANAFESA\Movimiento_Archivos\ABCFTPOracle\ABCFTPOracle\obj\Debug\ABCFTPOracle.CarvajalFESA.resources
+C:\Users\diana.montano\Documents\Proyectos FANAFESA\Movimiento_Archivos\ABCFTPOracle\ABCFTPOracle\obj\Debug\ABCFTPOracle.CorreosAtenea.resources
+C:\Users\diana.montano\Documents\Proyectos FANAFESA\Movimiento_Archivos\ABCFTPOracle\ABCFTPOracle\obj\Debug\ABCFTPOracle.CorreosBenavides.resources
+C:\Users\diana.montano\Documents\Proyectos FANAFESA\Movimiento_Archivos\ABCFTPOracle\ABCFTPOracle\obj\Debug\ABCFTPOracle.CorreosCarvajalFANASA.resources
+C:\Users\diana.montano\Documents\Proyectos FANAFESA\Movimiento_Archivos\ABCFTPOracle\ABCFTPOracle\obj\Debug\ABCFTPOracle.CorreosCarvajalFESA.resources
+C:\Users\diana.montano\Documents\Proyectos FANAFESA\Movimiento_Archivos\ABCFTPOracle\ABCFTPOracle\obj\Debug\ABCFTPOracle.CorreosEtiquetas.resources
+C:\Users\diana.montano\Documents\Proyectos FANAFESA\Movimiento_Archivos\ABCFTPOracle\ABCFTPOracle\obj\Debug\ABCFTPOracle.CorreosOracleRenovado.resources
+C:\Users\diana.montano\Documents\Proyectos FANAFESA\Movimiento_Archivos\ABCFTPOracle\ABCFTPOracle\obj\Debug\ABCFTPOracle.DepuracionArchivos.resources
+C:\Users\diana.montano\Documents\Proyectos FANAFESA\Movimiento_Archivos\ABCFTPOracle\ABCFTPOracle\obj\Debug\ABCFTPOracle.Etiquetas.resources
+C:\Users\diana.montano\Documents\Proyectos FANAFESA\Movimiento_Archivos\ABCFTPOracle\ABCFTPOracle\obj\Debug\ABCFTPOracle.Form1.resources
+C:\Users\diana.montano\Documents\Proyectos FANAFESA\Movimiento_Archivos\ABCFTPOracle\ABCFTPOracle\obj\Debug\ABCFTPOracle.Form2.resources
+C:\Users\diana.montano\Documents\Proyectos FANAFESA\Movimiento_Archivos\ABCFTPOracle\ABCFTPOracle\obj\Debug\ABCFTPOracle.Form3.resources
+C:\Users\diana.montano\Documents\Proyectos FANAFESA\Movimiento_Archivos\ABCFTPOracle\ABCFTPOracle\obj\Debug\ABCFTPOracle.Form4.resources
+C:\Users\diana.montano\Documents\Proyectos FANAFESA\Movimiento_Archivos\ABCFTPOracle\ABCFTPOracle\obj\Debug\ABCFTPOracle.Form5.resources
+C:\Users\diana.montano\Documents\Proyectos FANAFESA\Movimiento_Archivos\ABCFTPOracle\ABCFTPOracle\obj\Debug\ABCFTPOracle.OracleRenovado.resources
+C:\Users\diana.montano\Documents\Proyectos FANAFESA\Movimiento_Archivos\ABCFTPOracle\ABCFTPOracle\obj\Debug\ABCFTPOracle.Origen.resources
+C:\Users\diana.montano\Documents\Proyectos FANAFESA\Movimiento_Archivos\ABCFTPOracle\ABCFTPOracle\obj\Debug\ABCFTPOracle.OrigenAtenea.resources
+C:\Users\diana.montano\Documents\Proyectos FANAFESA\Movimiento_Archivos\ABCFTPOracle\ABCFTPOracle\obj\Debug\ABCFTPOracle.OrigenBenavides.resources
+C:\Users\diana.montano\Documents\Proyectos FANAFESA\Movimiento_Archivos\ABCFTPOracle\ABCFTPOracle\obj\Debug\ABCFTPOracle.OrigenCarvajalFANASA.resources
+C:\Users\diana.montano\Documents\Proyectos FANAFESA\Movimiento_Archivos\ABCFTPOracle\ABCFTPOracle\obj\Debug\ABCFTPOracle.OrigenCarvajalFESA.resources
+C:\Users\diana.montano\Documents\Proyectos FANAFESA\Movimiento_Archivos\ABCFTPOracle\ABCFTPOracle\obj\Debug\ABCFTPOracle.OrigenEtiquetas.resources
+C:\Users\diana.montano\Documents\Proyectos FANAFESA\Movimiento_Archivos\ABCFTPOracle\ABCFTPOracle\obj\Debug\ABCFTPOracle.Properties.Resources.resources
+C:\Users\diana.montano\Documents\Proyectos FANAFESA\Movimiento_Archivos\ABCFTPOracle\ABCFTPOracle\obj\Debug\ABCFTPOracle.csproj.GenerateResource.Cache
+C:\Users\diana.montano\Documents\Proyectos FANAFESA\Movimiento_Archivos\ABCFTPOracle\ABCFTPOracle\obj\Debug\ABCFTPOracle.exe.manifest
+C:\Users\diana.montano\Documents\Proyectos FANAFESA\Movimiento_Archivos\ABCFTPOracle\ABCFTPOracle\obj\Debug\ABCFTPOracle.application
+C:\Users\diana.montano\Documents\Proyectos FANAFESA\Movimiento_Archivos\ABCFTPOracle\ABCFTPOracle\obj\Debug\ABCFTPOracle.exe
+C:\Users\diana.montano\Documents\Proyectos FANAFESA\Movimiento_Archivos\ABCFTPOracle\ABCFTPOracle\obj\Debug\ABCFTPOracle.pdb
+C:\Users\diana.montano\Documents\Proyectos FANAFESA\Movimiento_Archivos\ABCFTPOracle\ABCFTPOracle\obj\Debug\ABCFTPOracle.csprojResolveAssemblyReference.cache

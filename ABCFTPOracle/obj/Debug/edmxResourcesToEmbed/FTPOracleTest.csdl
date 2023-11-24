@@ -1,0 +1,145 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Schema Namespace="ModelFTPOracleTest" Alias="Self" annotation:UseStrongSpatialTypes="false" xmlns:annotation="http://schemas.microsoft.com/ado/2009/02/edm/annotation" xmlns:customannotation="http://schemas.microsoft.com/ado/2013/11/edm/customannotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm">
+  <EntityType Name="CtlCorreos">
+    <Key>
+      <PropertyRef Name="IdCorreos" />
+    </Key>
+    <Property Name="IdCorreos" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="IdOrigenDatos" Type="Int32" />
+    <Property Name="Correo" Type="String" MaxLength="250" FixedLength="false" Unicode="true" />
+    <NavigationProperty Name="OrigenDatos" Relationship="Self.FK_CtlCorreos_OrigenDatos" FromRole="CtlCorreos" ToRole="OrigenDatos" />
+  </EntityType>
+  <EntityType Name="CtlCorreosFTP">
+    <Key>
+      <PropertyRef Name="IdCorreoFTP" />
+    </Key>
+    <Property Name="IdCorreoFTP" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="IdFTP" Type="Int32" />
+    <Property Name="Correo" Type="String" MaxLength="250" FixedLength="false" Unicode="true" />
+    <NavigationProperty Name="FTP" Relationship="Self.FK_CtlCorreosFTP_FTP" FromRole="CtlCorreosFTP" ToRole="FTP" />
+  </EntityType>
+  <EntityType Name="FTP">
+    <Key>
+      <PropertyRef Name="Id" />
+    </Key>
+    <Property Name="Id" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="Origen" Type="String" MaxLength="1550" FixedLength="false" Unicode="true" />
+    <Property Name="DestinoLocal" Type="String" MaxLength="1550" FixedLength="false" Unicode="true" />
+    <Property Name="IPFTP" Type="String" MaxLength="550" FixedLength="false" Unicode="true" />
+    <Property Name="UserFTP" Type="String" MaxLength="550" FixedLength="false" Unicode="true" />
+    <Property Name="PassFTP" Type="String" MaxLength="550" FixedLength="false" Unicode="true" />
+    <Property Name="DirectorioFTP" Type="String" MaxLength="1550" FixedLength="false" Unicode="true" />
+    <Property Name="Extensiones" Type="String" MaxLength="1550" FixedLength="false" Unicode="true" />
+    <Property Name="FTPSeguro" Type="Boolean" />
+    <Property Name="Puerto" Type="String" MaxLength="550" FixedLength="false" Unicode="true" />
+    <NavigationProperty Name="CtlCorreosFTP" Relationship="Self.FK_CtlCorreosFTP_FTP" FromRole="FTP" ToRole="CtlCorreosFTP" />
+  </EntityType>
+  <EntityType Name="Log">
+    <Key>
+      <PropertyRef Name="IdLog" />
+    </Key>
+    <Property Name="IdLog" Type="Guid" Nullable="false" />
+    <Property Name="Titulo" Type="String" MaxLength="250" FixedLength="false" Unicode="true" />
+    <Property Name="Tipo" Type="String" MaxLength="150" FixedLength="false" Unicode="true" />
+    <Property Name="ArchivoOracle" Type="String" MaxLength="250" FixedLength="false" Unicode="true" />
+    <Property Name="DestinoOneDrive" Type="String" MaxLength="250" FixedLength="false" Unicode="true" />
+    <Property Name="DestinoFTP" Type="String" MaxLength="250" FixedLength="false" Unicode="true" />
+    <Property Name="Estatus" Type="String" MaxLength="150" FixedLength="false" Unicode="true" />
+    <Property Name="DescripcionError" Type="String" MaxLength="1550" FixedLength="false" Unicode="true" />
+    <Property Name="Fecha" Type="DateTime" Precision="3" />
+  </EntityType>
+  <EntityType Name="LogFTP">
+    <Key>
+      <PropertyRef Name="IdLogFTP" />
+    </Key>
+    <Property Name="IdLogFTP" Type="Guid" Nullable="false" />
+    <Property Name="Titulo" Type="String" MaxLength="250" FixedLength="false" Unicode="true" />
+    <Property Name="Tipo" Type="String" MaxLength="250" FixedLength="false" Unicode="true" />
+    <Property Name="Archivo" Type="String" MaxLength="250" FixedLength="false" Unicode="true" />
+    <Property Name="Origen" Type="String" MaxLength="350" FixedLength="false" Unicode="true" />
+    <Property Name="DestinoLocal" Type="String" MaxLength="350" FixedLength="false" Unicode="true" />
+    <Property Name="Estatus" Type="String" MaxLength="350" FixedLength="false" Unicode="true" />
+    <Property Name="DescripcionError" Type="String" MaxLength="1550" FixedLength="false" Unicode="true" />
+    <Property Name="Fecha" Type="DateTime" Precision="3" />
+  </EntityType>
+  <EntityType Name="Notificaciones">
+    <Key>
+      <PropertyRef Name="Id" />
+    </Key>
+    <Property Name="Id" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="Correo" Type="String" MaxLength="150" FixedLength="false" Unicode="true" />
+  </EntityType>
+  <EntityType Name="OrigenDatos">
+    <Key>
+      <PropertyRef Name="IdOrigenDatos" />
+    </Key>
+    <Property Name="IdOrigenDatos" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="IdLaboratorio" Type="String" MaxLength="250" FixedLength="false" Unicode="true" />
+    <Property Name="Tipo" Type="String" MaxLength="150" FixedLength="false" Unicode="true" />
+    <Property Name="Extension" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+    <Property Name="Destino" Type="String" MaxLength="1500" FixedLength="false" Unicode="true" />
+    <Property Name="DestinoFTPPaso" Type="String" MaxLength="150" FixedLength="false" Unicode="true" />
+    <Property Name="IPFTP" Type="String" MaxLength="150" FixedLength="false" Unicode="true" />
+    <Property Name="UserFTP" Type="String" MaxLength="150" FixedLength="false" Unicode="true" />
+    <Property Name="PassFTP" Type="String" MaxLength="150" FixedLength="false" Unicode="true" />
+    <Property Name="DirectorioFTP" Type="String" MaxLength="150" FixedLength="false" Unicode="true" />
+    <Property Name="FTPSeguro" Type="Boolean" />
+    <Property Name="Puerto" Type="String" MaxLength="150" FixedLength="false" Unicode="true" />
+    <Property Name="AdjuntarArchivo" Type="Boolean" />
+    <Property Name="EnvioPDF" Type="String" MaxLength="150" FixedLength="false" Unicode="true" />
+    <Property Name="ModoActivo" Type="Boolean" />
+    <NavigationProperty Name="CtlCorreos" Relationship="Self.FK_CtlCorreos_OrigenDatos" FromRole="OrigenDatos" ToRole="CtlCorreos" />
+  </EntityType>
+  <EntityType Name="sysdiagrams">
+    <Key>
+      <PropertyRef Name="diagram_id" />
+    </Key>
+    <Property Name="name" Type="String" MaxLength="128" FixedLength="false" Unicode="true" Nullable="false" />
+    <Property Name="principal_id" Type="Int32" Nullable="false" />
+    <Property Name="diagram_id" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="version" Type="Int32" />
+    <Property Name="definition" Type="Binary" MaxLength="Max" FixedLength="false" />
+  </EntityType>
+  <Association Name="FK_CtlCorreos_OrigenDatos">
+    <End Role="OrigenDatos" Type="Self.OrigenDatos" Multiplicity="0..1" />
+    <End Role="CtlCorreos" Type="Self.CtlCorreos" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="OrigenDatos">
+        <PropertyRef Name="IdOrigenDatos" />
+      </Principal>
+      <Dependent Role="CtlCorreos">
+        <PropertyRef Name="IdOrigenDatos" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_CtlCorreosFTP_FTP">
+    <End Role="FTP" Type="Self.FTP" Multiplicity="0..1" />
+    <End Role="CtlCorreosFTP" Type="Self.CtlCorreosFTP" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="FTP">
+        <PropertyRef Name="Id" />
+      </Principal>
+      <Dependent Role="CtlCorreosFTP">
+        <PropertyRef Name="IdFTP" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <EntityContainer Name="ABCOracleTest" annotation:LazyLoadingEnabled="true">
+    <EntitySet Name="CtlCorreos" EntityType="Self.CtlCorreos" />
+    <EntitySet Name="CtlCorreosFTP" EntityType="Self.CtlCorreosFTP" />
+    <EntitySet Name="FTP" EntityType="Self.FTP" />
+    <EntitySet Name="Log" EntityType="Self.Log" />
+    <EntitySet Name="LogFTP" EntityType="Self.LogFTP" />
+    <EntitySet Name="Notificaciones" EntityType="Self.Notificaciones" />
+    <EntitySet Name="OrigenDatos" EntityType="Self.OrigenDatos" />
+    <EntitySet Name="sysdiagrams" EntityType="Self.sysdiagrams" />
+    <AssociationSet Name="FK_CtlCorreos_OrigenDatos" Association="Self.FK_CtlCorreos_OrigenDatos">
+      <End Role="OrigenDatos" EntitySet="OrigenDatos" />
+      <End Role="CtlCorreos" EntitySet="CtlCorreos" />
+    </AssociationSet>
+    <AssociationSet Name="FK_CtlCorreosFTP_FTP" Association="Self.FK_CtlCorreosFTP_FTP">
+      <End Role="FTP" EntitySet="FTP" />
+      <End Role="CtlCorreosFTP" EntitySet="CtlCorreosFTP" />
+    </AssociationSet>
+  </EntityContainer>
+</Schema>

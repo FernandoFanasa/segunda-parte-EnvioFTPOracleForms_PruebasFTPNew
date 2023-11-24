@@ -1,0 +1,443 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="14.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProjectGuid>{69FE80A4-7443-4DCA-BA4C-70B8501F5A0E}</ProjectGuid>
+    <OutputType>WinExe</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>ABCFTPOracle</RootNamespace>
+    <AssemblyName>ABCFTPOracle</AssemblyName>
+    <TargetFrameworkVersion>v4.5.2</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+    <AutoGenerateBindingRedirects>true</AutoGenerateBindingRedirects>
+    <IsWebBootstrapper>false</IsWebBootstrapper>
+    <PublishUrl>C:\Users\diana.montano\Documents\Proyectos FANAFESA\Movimiento_Archivos\PublicacionAppOracle\</PublishUrl>
+    <Install>true</Install>
+    <InstallFrom>Disk</InstallFrom>
+    <UpdateEnabled>false</UpdateEnabled>
+    <UpdateMode>Foreground</UpdateMode>
+    <UpdateInterval>7</UpdateInterval>
+    <UpdateIntervalUnits>Days</UpdateIntervalUnits>
+    <UpdatePeriodically>false</UpdatePeriodically>
+    <UpdateRequired>false</UpdateRequired>
+    <MapFileExtensions>true</MapFileExtensions>
+    <ApplicationRevision>25</ApplicationRevision>
+    <ApplicationVersion>1.0.0.%2a</ApplicationVersion>
+    <UseApplicationTrust>false</UseApplicationTrust>
+    <PublishWizardCompleted>true</PublishWizardCompleted>
+    <BootstrapperEnabled>true</BootstrapperEnabled>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup>
+    <ManifestCertificateThumbprint>C30A492E1546C8232FDD5640A6BD398AA5BCC80F</ManifestCertificateThumbprint>
+  </PropertyGroup>
+  <PropertyGroup>
+    <ManifestKeyFile>ABCFTPOracle_TemporaryKey.pfx</ManifestKeyFile>
+  </PropertyGroup>
+  <PropertyGroup>
+    <GenerateManifests>true</GenerateManifests>
+  </PropertyGroup>
+  <PropertyGroup>
+    <SignManifests>false</SignManifests>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="EntityFramework, Version=6.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089, processorArchitecture=MSIL">
+      <HintPath>..\packages\EntityFramework.6.1.3\lib\net45\EntityFramework.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="EntityFramework.SqlServer, Version=6.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089, processorArchitecture=MSIL">
+      <HintPath>..\packages\EntityFramework.6.1.3\lib\net45\EntityFramework.SqlServer.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="System" />
+    <Reference Include="System.ComponentModel.DataAnnotations" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Data.Linq" />
+    <Reference Include="System.Runtime.Serialization" />
+    <Reference Include="System.Security" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Deployment" />
+    <Reference Include="System.Drawing" />
+    <Reference Include="System.Net.Http" />
+    <Reference Include="System.Windows.Forms" />
+    <Reference Include="System.Xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="Atenea.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Atenea.Designer.cs">
+      <DependentUpon>Atenea.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Benavides.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Benavides.Designer.cs">
+      <DependentUpon>Benavides.cs</DependentUpon>
+    </Compile>
+    <Compile Include="CarvajalFANASA.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="CarvajalFANASA.Designer.cs">
+      <DependentUpon>CarvajalFANASA.cs</DependentUpon>
+    </Compile>
+    <Compile Include="CarvajalFESA.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="CarvajalFESA.Designer.cs">
+      <DependentUpon>CarvajalFESA.cs</DependentUpon>
+    </Compile>
+    <Compile Include="COBD.designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>COBD.dbml</DependentUpon>
+    </Compile>
+    <Compile Include="CorreosAtenea.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="CorreosAtenea.Designer.cs">
+      <DependentUpon>CorreosAtenea.cs</DependentUpon>
+    </Compile>
+    <Compile Include="CorreosBenavides.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="CorreosBenavides.Designer.cs">
+      <DependentUpon>CorreosBenavides.cs</DependentUpon>
+    </Compile>
+    <Compile Include="CorreosCarvajalFANASA.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="CorreosCarvajalFANASA.Designer.cs">
+      <DependentUpon>CorreosCarvajalFANASA.cs</DependentUpon>
+    </Compile>
+    <Compile Include="CorreosCarvajalFESA.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="CorreosCarvajalFESA.Designer.cs">
+      <DependentUpon>CorreosCarvajalFESA.cs</DependentUpon>
+    </Compile>
+    <Compile Include="CorreosEtiquetas.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="CorreosEtiquetas.Designer.cs">
+      <DependentUpon>CorreosEtiquetas.cs</DependentUpon>
+    </Compile>
+    <Compile Include="CorreosOracleRenovado.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="CorreosOracleRenovado.Designer.cs">
+      <DependentUpon>CorreosOracleRenovado.cs</DependentUpon>
+    </Compile>
+    <Compile Include="DataSet1.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>DataSet1.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="DepuracionArchivos.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="DepuracionArchivos.Designer.cs">
+      <DependentUpon>DepuracionArchivos.cs</DependentUpon>
+    </Compile>
+    <Compile Include="EnvioFTPOracleDataSet.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>EnvioFTPOracleDataSet.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="EnvioFTPOracleDataSetRenov.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>EnvioFTPOracleDataSetRenov.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="Etiquetas.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Etiquetas.Designer.cs">
+      <DependentUpon>Etiquetas.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Form1.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Form1.Designer.cs">
+      <DependentUpon>Form1.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Form2.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Form2.Designer.cs">
+      <DependentUpon>Form2.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Form3.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Form3.Designer.cs">
+      <DependentUpon>Form3.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Form4.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Form4.Designer.cs">
+      <DependentUpon>Form4.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Form5.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Form5.Designer.cs">
+      <DependentUpon>Form5.cs</DependentUpon>
+    </Compile>
+    <Compile Include="FtpOracleRenovado.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>FtpOracleRenovado.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="OracleRenovado.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="OracleRenovado.Designer.cs">
+      <DependentUpon>OracleRenovado.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Origen.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Origen.Designer.cs">
+      <DependentUpon>Origen.cs</DependentUpon>
+    </Compile>
+    <Compile Include="OrigenAtenea.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="OrigenAtenea.Designer.cs">
+      <DependentUpon>OrigenAtenea.cs</DependentUpon>
+    </Compile>
+    <Compile Include="OrigenBenavides.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="OrigenBenavides.Designer.cs">
+      <DependentUpon>OrigenBenavides.cs</DependentUpon>
+    </Compile>
+    <Compile Include="OrigenCarvajalFANASA.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="OrigenCarvajalFANASA.Designer.cs">
+      <DependentUpon>OrigenCarvajalFANASA.cs</DependentUpon>
+    </Compile>
+    <Compile Include="OrigenCarvajalFESA.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="OrigenCarvajalFESA.Designer.cs">
+      <DependentUpon>OrigenCarvajalFESA.cs</DependentUpon>
+    </Compile>
+    <Compile Include="OrigenEtiquetas.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="OrigenEtiquetas.Designer.cs">
+      <DependentUpon>OrigenEtiquetas.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Program.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <None Include="ABCFTPOracle_TemporaryKey.pfx" />
+    <None Include="COBD.dbml.layout">
+      <DependentUpon>COBD.dbml</DependentUpon>
+    </None>
+    <EmbeddedResource Include="Atenea.resx">
+      <DependentUpon>Atenea.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Benavides.resx">
+      <DependentUpon>Benavides.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="CarvajalFANASA.resx">
+      <DependentUpon>CarvajalFANASA.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="CarvajalFESA.resx">
+      <DependentUpon>CarvajalFESA.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="CorreosAtenea.resx">
+      <DependentUpon>CorreosAtenea.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="CorreosBenavides.resx">
+      <DependentUpon>CorreosBenavides.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="CorreosCarvajalFANASA.resx">
+      <DependentUpon>CorreosCarvajalFANASA.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="CorreosCarvajalFESA.resx">
+      <DependentUpon>CorreosCarvajalFESA.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="CorreosEtiquetas.resx">
+      <DependentUpon>CorreosEtiquetas.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="CorreosOracleRenovado.resx">
+      <DependentUpon>CorreosOracleRenovado.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="DepuracionArchivos.resx">
+      <DependentUpon>DepuracionArchivos.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Etiquetas.resx">
+      <DependentUpon>Etiquetas.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Form1.resx">
+      <DependentUpon>Form1.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Form2.resx">
+      <DependentUpon>Form2.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Form3.resx">
+      <DependentUpon>Form3.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Form4.resx">
+      <DependentUpon>Form4.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Form5.resx">
+      <DependentUpon>Form5.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="OracleRenovado.resx">
+      <DependentUpon>OracleRenovado.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Origen.resx">
+      <DependentUpon>Origen.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="OrigenAtenea.resx">
+      <DependentUpon>OrigenAtenea.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="OrigenBenavides.resx">
+      <DependentUpon>OrigenBenavides.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="OrigenCarvajalFANASA.resx">
+      <DependentUpon>OrigenCarvajalFANASA.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="OrigenCarvajalFESA.resx">
+      <DependentUpon>OrigenCarvajalFESA.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="OrigenEtiquetas.resx">
+      <DependentUpon>OrigenEtiquetas.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Properties\Resources.resx">
+      <Generator>ResXFileCodeGenerator</Generator>
+      <LastGenOutput>Resources.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <Compile Include="Properties\Resources.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Resources.resx</DependentUpon>
+    </Compile>
+    <None Include="COBD.dbml">
+      <Generator>MSLinqToSQLGenerator</Generator>
+      <LastGenOutput>COBD.designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="DataSet1.xsc">
+      <DependentUpon>DataSet1.xsd</DependentUpon>
+    </None>
+    <None Include="DataSet1.xsd">
+      <SubType>Designer</SubType>
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>DataSet1.Designer.cs</LastGenOutput>
+    </None>
+    <None Include="DataSet1.xss">
+      <DependentUpon>DataSet1.xsd</DependentUpon>
+    </None>
+    <None Include="EnvioFTPOracleDataSet.xsc">
+      <DependentUpon>EnvioFTPOracleDataSet.xsd</DependentUpon>
+    </None>
+    <None Include="EnvioFTPOracleDataSet.xsd">
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>EnvioFTPOracleDataSet.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="EnvioFTPOracleDataSet.xss">
+      <DependentUpon>EnvioFTPOracleDataSet.xsd</DependentUpon>
+    </None>
+    <None Include="EnvioFTPOracleDataSetRenov.xsc">
+      <DependentUpon>EnvioFTPOracleDataSetRenov.xsd</DependentUpon>
+    </None>
+    <None Include="EnvioFTPOracleDataSetRenov.xsd">
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>EnvioFTPOracleDataSetRenov.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="EnvioFTPOracleDataSetRenov.xss">
+      <DependentUpon>EnvioFTPOracleDataSetRenov.xsd</DependentUpon>
+    </None>
+    <None Include="FtpOracleRenovado.xsc">
+      <DependentUpon>FtpOracleRenovado.xsd</DependentUpon>
+    </None>
+    <None Include="FtpOracleRenovado.xsd">
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>FtpOracleRenovado.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="FtpOracleRenovado.xss">
+      <DependentUpon>FtpOracleRenovado.xsd</DependentUpon>
+    </None>
+    <None Include="packages.config" />
+    <None Include="Properties\Settings.settings">
+      <Generator>SettingsSingleFileGenerator</Generator>
+      <LastGenOutput>Settings.Designer.cs</LastGenOutput>
+    </None>
+    <Compile Include="Properties\Settings.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Settings.settings</DependentUpon>
+      <DesignTimeSharedInput>True</DesignTimeSharedInput>
+    </Compile>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="App.config">
+      <SubType>Designer</SubType>
+    </None>
+  </ItemGroup>
+  <ItemGroup>
+    <Service Include="{3259AA49-8AA1-44D3-9025-A0B520596A8C}" />
+    <Service Include="{508349B6-6B84-4DF5-91F0-309BEEBAD82D}" />
+  </ItemGroup>
+  <ItemGroup>
+    <BootstrapperPackage Include=".NETFramework,Version=v4.5.2">
+      <Visible>False</Visible>
+      <ProductName>Microsoft .NET Framework 4.5.2 %28x86 y x64%29</ProductName>
+      <Install>true</Install>
+    </BootstrapperPackage>
+    <BootstrapperPackage Include="Microsoft.Net.Framework.3.5.SP1">
+      <Visible>False</Visible>
+      <ProductName>.NET Framework 3.5 SP1</ProductName>
+      <Install>false</Install>
+    </BootstrapperPackage>
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="Database1.mdf">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Database1_log.ldf">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+      <DependentUpon>Database1.mdf</DependentUpon>
+    </Content>
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target>
+  -->
+</Project>

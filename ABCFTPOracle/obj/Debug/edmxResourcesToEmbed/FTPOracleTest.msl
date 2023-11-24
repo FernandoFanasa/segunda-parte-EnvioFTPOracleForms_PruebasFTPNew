@@ -1,0 +1,109 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Mapping Space="C-S" xmlns="http://schemas.microsoft.com/ado/2009/11/mapping/cs">
+  <EntityContainerMapping StorageEntityContainer="ModelFTPOracleTestStoreContainer" CdmEntityContainer="ABCOracleTest">
+    <EntitySetMapping Name="CtlCorreos">
+      <EntityTypeMapping TypeName="ModelFTPOracleTest.CtlCorreos">
+        <MappingFragment StoreEntitySet="CtlCorreos">
+          <ScalarProperty Name="IdCorreos" ColumnName="IdCorreos" />
+          <ScalarProperty Name="IdOrigenDatos" ColumnName="IdOrigenDatos" />
+          <ScalarProperty Name="Correo" ColumnName="Correo" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="CtlCorreosFTP">
+      <EntityTypeMapping TypeName="ModelFTPOracleTest.CtlCorreosFTP">
+        <MappingFragment StoreEntitySet="CtlCorreosFTP">
+          <ScalarProperty Name="IdCorreoFTP" ColumnName="IdCorreoFTP" />
+          <ScalarProperty Name="IdFTP" ColumnName="IdFTP" />
+          <ScalarProperty Name="Correo" ColumnName="Correo" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="FTP">
+      <EntityTypeMapping TypeName="ModelFTPOracleTest.FTP">
+        <MappingFragment StoreEntitySet="FTP">
+          <ScalarProperty Name="Id" ColumnName="Id" />
+          <ScalarProperty Name="Origen" ColumnName="Origen" />
+          <ScalarProperty Name="DestinoLocal" ColumnName="DestinoLocal" />
+          <ScalarProperty Name="IPFTP" ColumnName="IPFTP" />
+          <ScalarProperty Name="UserFTP" ColumnName="UserFTP" />
+          <ScalarProperty Name="PassFTP" ColumnName="PassFTP" />
+          <ScalarProperty Name="DirectorioFTP" ColumnName="DirectorioFTP" />
+          <ScalarProperty Name="Extensiones" ColumnName="Extensiones" />
+          <ScalarProperty Name="FTPSeguro" ColumnName="FTPSeguro" />
+          <ScalarProperty Name="Puerto" ColumnName="Puerto" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="Log">
+      <EntityTypeMapping TypeName="ModelFTPOracleTest.Log">
+        <MappingFragment StoreEntitySet="Log">
+          <ScalarProperty Name="IdLog" ColumnName="IdLog" />
+          <ScalarProperty Name="Titulo" ColumnName="Titulo" />
+          <ScalarProperty Name="Tipo" ColumnName="Tipo" />
+          <ScalarProperty Name="ArchivoOracle" ColumnName="ArchivoOracle" />
+          <ScalarProperty Name="DestinoOneDrive" ColumnName="DestinoOneDrive" />
+          <ScalarProperty Name="DestinoFTP" ColumnName="DestinoFTP" />
+          <ScalarProperty Name="Estatus" ColumnName="Estatus" />
+          <ScalarProperty Name="DescripcionError" ColumnName="DescripcionError" />
+          <ScalarProperty Name="Fecha" ColumnName="Fecha" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="LogFTP">
+      <EntityTypeMapping TypeName="ModelFTPOracleTest.LogFTP">
+        <MappingFragment StoreEntitySet="LogFTP">
+          <ScalarProperty Name="IdLogFTP" ColumnName="IdLogFTP" />
+          <ScalarProperty Name="Titulo" ColumnName="Titulo" />
+          <ScalarProperty Name="Tipo" ColumnName="Tipo" />
+          <ScalarProperty Name="Archivo" ColumnName="Archivo" />
+          <ScalarProperty Name="Origen" ColumnName="Origen" />
+          <ScalarProperty Name="DestinoLocal" ColumnName="DestinoLocal" />
+          <ScalarProperty Name="Estatus" ColumnName="Estatus" />
+          <ScalarProperty Name="DescripcionError" ColumnName="DescripcionError" />
+          <ScalarProperty Name="Fecha" ColumnName="Fecha" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="Notificaciones">
+      <EntityTypeMapping TypeName="ModelFTPOracleTest.Notificaciones">
+        <MappingFragment StoreEntitySet="Notificaciones">
+          <ScalarProperty Name="Id" ColumnName="Id" />
+          <ScalarProperty Name="Correo" ColumnName="Correo" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="OrigenDatos">
+      <EntityTypeMapping TypeName="ModelFTPOracleTest.OrigenDatos">
+        <MappingFragment StoreEntitySet="OrigenDatos">
+          <ScalarProperty Name="IdOrigenDatos" ColumnName="IdOrigenDatos" />
+          <ScalarProperty Name="IdLaboratorio" ColumnName="IdLaboratorio" />
+          <ScalarProperty Name="Tipo" ColumnName="Tipo" />
+          <ScalarProperty Name="Extension" ColumnName="Extension" />
+          <ScalarProperty Name="Destino" ColumnName="Destino" />
+          <ScalarProperty Name="DestinoFTPPaso" ColumnName="DestinoFTPPaso" />
+          <ScalarProperty Name="IPFTP" ColumnName="IPFTP" />
+          <ScalarProperty Name="UserFTP" ColumnName="UserFTP" />
+          <ScalarProperty Name="PassFTP" ColumnName="PassFTP" />
+          <ScalarProperty Name="DirectorioFTP" ColumnName="DirectorioFTP" />
+          <ScalarProperty Name="FTPSeguro" ColumnName="FTPSeguro" />
+          <ScalarProperty Name="Puerto" ColumnName="Puerto" />
+          <ScalarProperty Name="AdjuntarArchivo" ColumnName="AdjuntarArchivo" />
+          <ScalarProperty Name="EnvioPDF" ColumnName="EnvioPDF" />
+          <ScalarProperty Name="ModoActivo" ColumnName="ModoActivo" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="sysdiagrams">
+      <EntityTypeMapping TypeName="ModelFTPOracleTest.sysdiagrams">
+        <MappingFragment StoreEntitySet="sysdiagrams">
+          <ScalarProperty Name="name" ColumnName="name" />
+          <ScalarProperty Name="principal_id" ColumnName="principal_id" />
+          <ScalarProperty Name="diagram_id" ColumnName="diagram_id" />
+          <ScalarProperty Name="version" ColumnName="version" />
+          <ScalarProperty Name="definition" ColumnName="definition" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+  </EntityContainerMapping>
+</Mapping>

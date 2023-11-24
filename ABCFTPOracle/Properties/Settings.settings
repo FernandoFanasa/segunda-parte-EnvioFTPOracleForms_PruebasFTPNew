@@ -1,0 +1,38 @@
+﻿<?xml version='1.0' encoding='utf-8'?>
+<SettingsFile xmlns="http://schemas.microsoft.com/VisualStudio/2004/01/settings" CurrentProfile="(Default)" GeneratedClassNamespace="ABCFTPOracle.Properties" GeneratedClassName="Settings">
+  <Profiles />
+  <Settings>
+    <Setting Name="EnvioFTPOracleConnectionString" Type="(Connection string)" Scope="Application">
+      <DesignTimeValue Profile="(Default)">&lt;?xml version="1.0" encoding="utf-16"?&gt;
+&lt;SerializableConnectionString xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema"&gt;
+  &lt;ConnectionString&gt;Data Source=172.17.3.81;Initial Catalog=EnvioFTPOracle;Persist Security Info=True;User ID=envio_ftp;Password=Apl1c4t1v0&lt;/ConnectionString&gt;
+  &lt;ProviderName&gt;System.Data.SqlClient&lt;/ProviderName&gt;
+&lt;/SerializableConnectionString&gt;</DesignTimeValue>
+      <Value Profile="(Default)">Data Source=172.17.3.81;Initial Catalog=EnvioFTPOracle;Persist Security Info=True;User ID=envio_ftp;Password=Apl1c4t1v0</Value>
+    </Setting>
+    <Setting Name="FtpConnectionString" Type="(Connection string)" Scope="Application">
+      <DesignTimeValue Profile="(Default)">&lt;?xml version="1.0" encoding="utf-16"?&gt;
+&lt;SerializableConnectionString xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema"&gt;
+  &lt;ConnectionString&gt;Data Source=172.16.14.68;Initial Catalog=Ftp;Persist Security Info=True;User ID=adminDBA;Password="U=8vwq%@btP4_VBM"&lt;/ConnectionString&gt;
+  &lt;ProviderName&gt;System.Data.SqlClient&lt;/ProviderName&gt;
+&lt;/SerializableConnectionString&gt;</DesignTimeValue>
+      <Value Profile="(Default)">Data Source=172.16.14.68;Initial Catalog=Ftp;Persist Security Info=True;User ID=adminDBA;Password="U=8vwq%@btP4_VBM"</Value>
+    </Setting>
+    <Setting Name="EnvioFTPOracleConnectionString1" Type="(Connection string)" Scope="Application">
+      <DesignTimeValue Profile="(Default)">&lt;?xml version="1.0" encoding="utf-16"?&gt;
+&lt;SerializableConnectionString xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema"&gt;
+  &lt;ConnectionString&gt;Data Source=172.16.14.68;Initial Catalog=Ftp;Persist Security Info=True;User ID=adminDBA;Password=U=8vwq%@btP4_VBM&lt;/ConnectionString&gt;
+  &lt;ProviderName&gt;System.Data.SqlClient&lt;/ProviderName&gt;
+&lt;/SerializableConnectionString&gt;</DesignTimeValue>
+      <Value Profile="(Default)">Data Source=172.16.14.68;Initial Catalog=Ftp;Persist Security Info=True;User ID=adminDBA;Password=U=8vwq%@btP4_VBM</Value>
+    </Setting>
+    <Setting Name="EnvioFTPOracleConnectionString2" Type="(Connection string)" Scope="Application">
+      <DesignTimeValue Profile="(Default)">&lt;?xml version="1.0" encoding="utf-16"?&gt;
+&lt;SerializableConnectionString xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema"&gt;
+  &lt;ConnectionString&gt;Data Source=192.168.11.31;Initial Catalog=EnvioFTPOracle;Persist Security Info=True;User ID=envio_ftp;Password=Apl1c4t1v0&lt;/ConnectionString&gt;
+  &lt;ProviderName&gt;System.Data.SqlClient&lt;/ProviderName&gt;
+&lt;/SerializableConnectionString&gt;</DesignTimeValue>
+      <Value Profile="(Default)">Data Source=192.168.11.31;Initial Catalog=EnvioFTPOracle;Persist Security Info=True;User ID=envio_ftp;Password=Apl1c4t1v0</Value>
+    </Setting>
+  </Settings>
+</SettingsFile>
