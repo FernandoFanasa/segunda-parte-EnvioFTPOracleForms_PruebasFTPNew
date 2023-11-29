@@ -110,6 +110,12 @@
     <Compile Include="CarvajalFESA.Designer.cs">
       <DependentUpon>CarvajalFESA.cs</DependentUpon>
     </Compile>
+    <Compile Include="ClientesFANASA.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="ClientesFANASA.Designer.cs">
+      <DependentUpon>ClientesFANASA.cs</DependentUpon>
+    </Compile>
     <Compile Include="COBD.designer.cs">
       <AutoGen>True</AutoGen>
       <DesignTime>True</DesignTime>
@@ -272,6 +278,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="CarvajalFESA.resx">
       <DependentUpon>CarvajalFESA.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ClientesFANASA.resx">
+      <DependentUpon>ClientesFANASA.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="CorreosAtenea.resx">
       <DependentUpon>CorreosAtenea.cs</DependentUpon>
