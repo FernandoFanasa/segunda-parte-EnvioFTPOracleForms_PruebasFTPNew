@@ -39,9 +39,10 @@
             this.etiquetasOracleToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.ateneaToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.carvajalFANASAToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.carvajalFESAToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.oracleFTPRenovadoToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.label1 = new System.Windows.Forms.Label();
-            this.carvajalFESAToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.clientesFANASAToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.menuStrip1.SuspendLayout();
             this.SuspendLayout();
             // 
@@ -66,7 +67,8 @@
             this.etiquetasOracleToolStripMenuItem,
             this.ateneaToolStripMenuItem,
             this.carvajalFANASAToolStripMenuItem,
-            this.carvajalFESAToolStripMenuItem});
+            this.carvajalFESAToolStripMenuItem,
+            this.clientesFANASAToolStripMenuItem});
             this.envioFToolStripMenuItem.Name = "envioFToolStripMenuItem";
             this.envioFToolStripMenuItem.Size = new System.Drawing.Size(50, 20);
             this.envioFToolStripMenuItem.Text = "Menu";
@@ -127,6 +129,13 @@
             this.carvajalFANASAToolStripMenuItem.Text = "Carvajal FANASA";
             this.carvajalFANASAToolStripMenuItem.Click += new System.EventHandler(this.carvajalFANASAToolStripMenuItem_Click);
             // 
+            // carvajalFESAToolStripMenuItem
+            // 
+            this.carvajalFESAToolStripMenuItem.Name = "carvajalFESAToolStripMenuItem";
+            this.carvajalFESAToolStripMenuItem.Size = new System.Drawing.Size(186, 22);
+            this.carvajalFESAToolStripMenuItem.Text = "Carvajal FESA";
+            this.carvajalFESAToolStripMenuItem.Click += new System.EventHandler(this.carvajalFESAToolStripMenuItem_Click);
+            // 
             // oracleFTPRenovadoToolStripMenuItem
             // 
             this.oracleFTPRenovadoToolStripMenuItem.Name = "oracleFTPRenovadoToolStripMenuItem";
@@ -144,12 +153,12 @@
             this.label1.TabIndex = 1;
             this.label1.Text = "Control para el  envio FTP Oracle";
             // 
-            // carvajalFESAToolStripMenuItem
+            // clientesFANASAToolStripMenuItem
             // 
-            this.carvajalFESAToolStripMenuItem.Name = "carvajalFESAToolStripMenuItem";
-            this.carvajalFESAToolStripMenuItem.Size = new System.Drawing.Size(186, 22);
-            this.carvajalFESAToolStripMenuItem.Text = "Carvajal FESA";
-            this.carvajalFESAToolStripMenuItem.Click += new System.EventHandler(this.carvajalFESAToolStripMenuItem_Click);
+            this.clientesFANASAToolStripMenuItem.Name = "clientesFANASAToolStripMenuItem";
+            this.clientesFANASAToolStripMenuItem.Size = new System.Drawing.Size(186, 22);
+            this.clientesFANASAToolStripMenuItem.Text = "Clientes FANASA";
+            this.clientesFANASAToolStripMenuItem.Click += new System.EventHandler(this.clientesFANASAToolStripMenuItem_Click);
             // 
             // Form1
             // 
@@ -186,6 +195,7 @@
         private System.Windows.Forms.ToolStripMenuItem ateneaToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem carvajalFANASAToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem carvajalFESAToolStripMenuItem;
+        private System.Windows.Forms.ToolStripMenuItem clientesFANASAToolStripMenuItem;
     }
 }
 

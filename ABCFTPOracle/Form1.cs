@@ -88,5 +88,15 @@ namespace ABCFTPOracle
             carvaFESA.Show();
             this.Owner = carvaFESA;
         }
+
+        private void clientesFANASAToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            this.Hide();
+            ClientesFANASA clientes = new ClientesFANASA();
+            clientes.Show();
+            this.Owner = clientes;
+        }
+
+
     }
 }
