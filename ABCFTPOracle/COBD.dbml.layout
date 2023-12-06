@@ -1,5 +1,5 @@
 ﻿<?xml version="1.0" encoding="utf-8"?>
-<ordesignerObjectsDiagram dslVersion="1.0.0.0" absoluteBounds="0, 0, 15.875, 38" name="COBD">
+<ordesignerObjectsDiagram dslVersion="1.0.0.0" absoluteBounds="0, 0, 15.875, 45" name="COBD">
   <DataContextMoniker Name="/COBDDataContext" />
   <nestedChildShapes>
     <classShape Id="898aee46-305f-4b77-8d02-a7415934ec37" absoluteBounds="7.625, 0.5, 2, 3.6939111328124996">
@@ -88,7 +88,7 @@
         <elementListCompartment Id="e1b1c252-0767-44af-9307-c24a90783bc9" absoluteBounds="10.64, 13.96, 1.9700000000000002, 0.8262939453125" name="DataPropertiesCompartment" titleTextColor="Black" itemTextColor="Black" />
       </nestedChildShapes>
     </classShape>
-    <associationConnector edgePoints="[(9.625 : 14.2556469726562); (10.625 : 14.2556469726562)]" fixedFrom="Algorithm" fixedTo="Algorithm">
+    <associationConnector edgePoints="[(9.625 : 14.2556469726562); (10.625 : 14.2556469726562)]" fixedFrom="NotFixed" fixedTo="NotFixed">
       <AssociationMoniker Name="/COBDDataContext/OrigenDatosBenavides/OrigenDatosBenavides_CtlCorreosBenavides" />
       <nodes>
         <classShapeMoniker Id="7d9de4e5-fc88-4ad4-a881-6cd1688c9063" />
@@ -101,7 +101,7 @@
         <elementListCompartment Id="1c0f838f-9d4f-4094-8912-8e9ecbf00111" absoluteBounds="10.765, 15.71, 1.9700000000000002, 1.7878011067708335" name="DataPropertiesCompartment" titleTextColor="Black" itemTextColor="Black" />
       </nestedChildShapes>
     </classShape>
-    <associationConnector edgePoints="[(10.75 : 15.5521443098958); (9.625 : 15.5521443098958)]" fixedFrom="Algorithm" fixedTo="Algorithm">
+    <associationConnector edgePoints="[(10.75 : 15.5521443098958); (9.625 : 15.5521443098958)]" fixedFrom="NotFixed" fixedTo="NotFixed">
       <AssociationMoniker Name="/COBDDataContext/ConfiguracionOrigenBenavides/ConfiguracionOrigenBenavides_OrigenDatosBenavides" />
       <nodes>
         <classShapeMoniker Id="50165d52-89be-4ed8-800f-bcddcb2401a4" />
@@ -284,19 +284,57 @@
         <elementListCompartment Id="234bf8e6-aaa4-4005-baa7-07be50934106" absoluteBounds="7.5150000000000006, 8.96, 1.9700000000000002, 4.2877197265625" name="DataPropertiesCompartment" titleTextColor="Black" itemTextColor="Black" />
       </nestedChildShapes>
     </classShape>
-    <associationConnector edgePoints="[(9.5 : 9.19314697265625); (10.75 : 9.19314697265625)]" fixedFrom="Algorithm" fixedTo="Algorithm">
+    <associationConnector edgePoints="[(9.5 : 9.19314697265625); (10.75 : 9.19314697265625)]" fixedFrom="NotFixed" fixedTo="NotFixed">
       <AssociationMoniker Name="/COBDDataContext/OrigenDatosFanasa/OrigenDatosFanasa_CtlCorreosFanasa" />
       <nodes>
         <classShapeMoniker Id="93703fe1-6378-4b58-9b0e-817ada1198ed" />
         <classShapeMoniker Id="f32918a2-dea6-4377-9316-d0a964e5e92d" />
       </nodes>
     </associationConnector>
-    <associationConnector edgePoints="[(10.75 : 11.6450512695312); (9.5 : 11.6450512695312)]" fixedFrom="Algorithm" fixedTo="Algorithm">
+    <associationConnector edgePoints="[(10.75 : 11.6450512695312); (9.5 : 11.6450512695312)]" fixedFrom="NotFixed" fixedTo="NotFixed">
       <AssociationMoniker Name="/COBDDataContext/ConfiguracionOrigen/ConfiguracionOrigen_OrigenDatosFanasa" />
       <nodes>
         <classShapeMoniker Id="1b63d1ca-8ac1-4811-838b-47bc37be0243" />
         <classShapeMoniker Id="93703fe1-6378-4b58-9b0e-817ada1198ed" />
       </nodes>
     </associationConnector>
+    <classShape Id="eca9ca3a-e41e-43f8-ab0d-7dbd958e3781" absoluteBounds="8.875, 42.375, 2, 2.3478011067708335">
+      <DataClassMoniker Name="/COBDDataContext/ConfiguracionOrigenClientesFANASA" />
+      <nestedChildShapes>
+        <elementListCompartment Id="641a60da-c1cf-4f49-8108-27b256347f81" absoluteBounds="8.89, 42.835, 1.9700000000000002, 1.7878011067708335" name="DataPropertiesCompartment" titleTextColor="Black" itemTextColor="Black" />
+      </nestedChildShapes>
+    </classShape>
+    <classShape Id="06ac9231-5c6f-4816-8c4e-9913c4e56743" absoluteBounds="6.125, 40.5, 2, 2.1554996744791666">
+      <DataClassMoniker Name="/COBDDataContext/OrigenDatosClientesFANASA" />
+      <nestedChildShapes>
+        <elementListCompartment Id="5eaae6a7-4d29-4076-a8b5-a9d582935061" absoluteBounds="6.14, 40.96, 1.9700000000000002, 1.5954996744791665" name="DataPropertiesCompartment" titleTextColor="Black" itemTextColor="Black" />
+      </nestedChildShapes>
+    </classShape>
+    <associationConnector edgePoints="[(8.875 : 43.689150890625); (7.125 : 43.689150890625); (7.125 : 42.6554996744792)]" fixedFrom="Algorithm" fixedTo="Algorithm">
+      <AssociationMoniker Name="/COBDDataContext/ConfiguracionOrigenClientesFANASA/ConfiguracionOrigenClientesFANASA_OrigenDatosClientesFANASA" />
+      <nodes>
+        <classShapeMoniker Id="eca9ca3a-e41e-43f8-ab0d-7dbd958e3781" />
+        <classShapeMoniker Id="06ac9231-5c6f-4816-8c4e-9913c4e56743" />
+      </nodes>
+    </associationConnector>
+    <classShape Id="158a370e-1649-4c47-a093-a545e5096853" absoluteBounds="8.875, 40.25, 2, 1.3862939453125">
+      <DataClassMoniker Name="/COBDDataContext/CtlCorreosClientesFANASA" />
+      <nestedChildShapes>
+        <elementListCompartment Id="1bb137d9-58d2-49e4-a43f-051e0b7f7c23" absoluteBounds="8.89, 40.71, 1.9700000000000002, 0.8262939453125" name="DataPropertiesCompartment" titleTextColor="Black" itemTextColor="Black" />
+      </nestedChildShapes>
+    </classShape>
+    <associationConnector edgePoints="[(8.125 : 41.0681469726563); (8.875 : 41.0681469726563)]" fixedFrom="Algorithm" fixedTo="Algorithm">
+      <AssociationMoniker Name="/COBDDataContext/OrigenDatosClientesFANASA/OrigenDatosClientesFANASA_CtlCorreosClientesFANASA" />
+      <nodes>
+        <classShapeMoniker Id="06ac9231-5c6f-4816-8c4e-9913c4e56743" />
+        <classShapeMoniker Id="158a370e-1649-4c47-a093-a545e5096853" />
+      </nodes>
+    </associationConnector>
+    <classShape Id="a4d7da97-f2f0-4bc6-8043-7b086e9fb3a0" absoluteBounds="11.5, 40.75, 2, 2.3478011067708335">
+      <DataClassMoniker Name="/COBDDataContext/LogClientesFANASA" />
+      <nestedChildShapes>
+        <elementListCompartment Id="7668e6b5-dfab-49da-8fb7-58e0c32104bb" absoluteBounds="11.515, 41.21, 1.9700000000000002, 1.7878011067708335" name="DataPropertiesCompartment" titleTextColor="Black" itemTextColor="Black" />
+      </nestedChildShapes>
+    </classShape>
   </nestedChildShapes>
 </ordesignerObjectsDiagram>

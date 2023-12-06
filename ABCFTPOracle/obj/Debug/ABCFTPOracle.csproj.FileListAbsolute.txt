@@ -99,3 +99,46 @@ C:\Users\diana.montano\Documents\Proyectos FANAFESA\Movimiento_Archivos\ABCFTPOr
 C:\Users\diana.montano\Documents\Proyectos FANAFESA\Movimiento_Archivos\ABCFTPOracle\ABCFTPOracle\obj\Debug\ABCFTPOracle.exe
 C:\Users\diana.montano\Documents\Proyectos FANAFESA\Movimiento_Archivos\ABCFTPOracle\ABCFTPOracle\obj\Debug\ABCFTPOracle.pdb
 C:\Users\diana.montano\Documents\Proyectos FANAFESA\Movimiento_Archivos\ABCFTPOracle\ABCFTPOracle\obj\Debug\ABCFTPOracle.csprojResolveAssemblyReference.cache
+C:\Proyectos\ABCFTPOracle\ABCFTPOracle\bin\Debug\Database1.mdf
+C:\Proyectos\ABCFTPOracle\ABCFTPOracle\bin\Debug\Database1_log.ldf
+C:\Proyectos\ABCFTPOracle\ABCFTPOracle\bin\Debug\ABCFTPOracle.exe.config
+C:\Proyectos\ABCFTPOracle\ABCFTPOracle\bin\Debug\ABCFTPOracle.exe.manifest
+C:\Proyectos\ABCFTPOracle\ABCFTPOracle\bin\Debug\ABCFTPOracle.application
+C:\Proyectos\ABCFTPOracle\ABCFTPOracle\bin\Debug\ABCFTPOracle.exe
+C:\Proyectos\ABCFTPOracle\ABCFTPOracle\bin\Debug\ABCFTPOracle.pdb
+C:\Proyectos\ABCFTPOracle\ABCFTPOracle\bin\Debug\EntityFramework.dll
+C:\Proyectos\ABCFTPOracle\ABCFTPOracle\bin\Debug\EntityFramework.SqlServer.dll
+C:\Proyectos\ABCFTPOracle\ABCFTPOracle\bin\Debug\EntityFramework.xml
+C:\Proyectos\ABCFTPOracle\ABCFTPOracle\bin\Debug\EntityFramework.SqlServer.xml
+C:\Proyectos\ABCFTPOracle\ABCFTPOracle\obj\Debug\ABCFTPOracle.csprojResolveAssemblyReference.cache
+C:\Proyectos\ABCFTPOracle\ABCFTPOracle\obj\Debug\ABCFTPOracle.Atenea.resources
+C:\Proyectos\ABCFTPOracle\ABCFTPOracle\obj\Debug\ABCFTPOracle.Benavides.resources
+C:\Proyectos\ABCFTPOracle\ABCFTPOracle\obj\Debug\ABCFTPOracle.CarvajalFANASA.resources
+C:\Proyectos\ABCFTPOracle\ABCFTPOracle\obj\Debug\ABCFTPOracle.CarvajalFESA.resources
+C:\Proyectos\ABCFTPOracle\ABCFTPOracle\obj\Debug\ABCFTPOracle.ClientesFANASA.resources
+C:\Proyectos\ABCFTPOracle\ABCFTPOracle\obj\Debug\ABCFTPOracle.CorreosAtenea.resources
+C:\Proyectos\ABCFTPOracle\ABCFTPOracle\obj\Debug\ABCFTPOracle.CorreosBenavides.resources
+C:\Proyectos\ABCFTPOracle\ABCFTPOracle\obj\Debug\ABCFTPOracle.CorreosCarvajalFANASA.resources
+C:\Proyectos\ABCFTPOracle\ABCFTPOracle\obj\Debug\ABCFTPOracle.CorreosCarvajalFESA.resources
+C:\Proyectos\ABCFTPOracle\ABCFTPOracle\obj\Debug\ABCFTPOracle.CorreosEtiquetas.resources
+C:\Proyectos\ABCFTPOracle\ABCFTPOracle\obj\Debug\ABCFTPOracle.CorreosOracleRenovado.resources
+C:\Proyectos\ABCFTPOracle\ABCFTPOracle\obj\Debug\ABCFTPOracle.DepuracionArchivos.resources
+C:\Proyectos\ABCFTPOracle\ABCFTPOracle\obj\Debug\ABCFTPOracle.Etiquetas.resources
+C:\Proyectos\ABCFTPOracle\ABCFTPOracle\obj\Debug\ABCFTPOracle.Form1.resources
+C:\Proyectos\ABCFTPOracle\ABCFTPOracle\obj\Debug\ABCFTPOracle.Form2.resources
+C:\Proyectos\ABCFTPOracle\ABCFTPOracle\obj\Debug\ABCFTPOracle.Form3.resources
+C:\Proyectos\ABCFTPOracle\ABCFTPOracle\obj\Debug\ABCFTPOracle.Form4.resources
+C:\Proyectos\ABCFTPOracle\ABCFTPOracle\obj\Debug\ABCFTPOracle.Form5.resources
+C:\Proyectos\ABCFTPOracle\ABCFTPOracle\obj\Debug\ABCFTPOracle.OracleRenovado.resources
+C:\Proyectos\ABCFTPOracle\ABCFTPOracle\obj\Debug\ABCFTPOracle.Origen.resources
+C:\Proyectos\ABCFTPOracle\ABCFTPOracle\obj\Debug\ABCFTPOracle.OrigenAtenea.resources
+C:\Proyectos\ABCFTPOracle\ABCFTPOracle\obj\Debug\ABCFTPOracle.OrigenBenavides.resources
+C:\Proyectos\ABCFTPOracle\ABCFTPOracle\obj\Debug\ABCFTPOracle.OrigenCarvajalFANASA.resources
+C:\Proyectos\ABCFTPOracle\ABCFTPOracle\obj\Debug\ABCFTPOracle.OrigenCarvajalFESA.resources
+C:\Proyectos\ABCFTPOracle\ABCFTPOracle\obj\Debug\ABCFTPOracle.OrigenEtiquetas.resources
+C:\Proyectos\ABCFTPOracle\ABCFTPOracle\obj\Debug\ABCFTPOracle.Properties.Resources.resources
+C:\Proyectos\ABCFTPOracle\ABCFTPOracle\obj\Debug\ABCFTPOracle.csproj.GenerateResource.Cache
+C:\Proyectos\ABCFTPOracle\ABCFTPOracle\obj\Debug\ABCFTPOracle.exe.manifest
+C:\Proyectos\ABCFTPOracle\ABCFTPOracle\obj\Debug\ABCFTPOracle.application
+C:\Proyectos\ABCFTPOracle\ABCFTPOracle\obj\Debug\ABCFTPOracle.exe
+C:\Proyectos\ABCFTPOracle\ABCFTPOracle\obj\Debug\ABCFTPOracle.pdb

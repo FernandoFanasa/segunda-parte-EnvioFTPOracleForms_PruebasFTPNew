@@ -1,7 +1,7 @@
 ﻿
 namespace ABCFTPOracle
 {
-    partial class ClientesFANASA
+    public partial class ClientesFANASA
     {
         /// <summary>
         /// Required designer variable.
@@ -40,17 +40,20 @@ namespace ABCFTPOracle
             this.button2 = new System.Windows.Forms.Button();
             this.button1 = new System.Windows.Forms.Button();
             this.lblID = new System.Windows.Forms.Label();
-            this.label7 = new System.Windows.Forms.Label();
-            this.comboBoxOrigen = new System.Windows.Forms.ComboBox();
-            this.label6 = new System.Windows.Forms.Label();
+            this.label7ID = new System.Windows.Forms.Label();
             this.txtBxDestino = new System.Windows.Forms.TextBox();
-            this.label5 = new System.Windows.Forms.Label();
+            this.label5Destino = new System.Windows.Forms.Label();
             this.txtBxExt = new System.Windows.Forms.TextBox();
-            this.label4 = new System.Windows.Forms.Label();
+            this.label4_Extencion = new System.Windows.Forms.Label();
             this.txtBxField2 = new System.Windows.Forms.TextBox();
-            this.label2 = new System.Windows.Forms.Label();
+            this.label2_Documento2 = new System.Windows.Forms.Label();
+            this.label1_Documento1 = new System.Windows.Forms.Label();
             this.txtBxField1 = new System.Windows.Forms.TextBox();
-            this.label1 = new System.Windows.Forms.Label();
+            this.txtBxDestinoRespaldo = new System.Windows.Forms.TextBox();
+            this.label6DEstinoRespaldo = new System.Windows.Forms.Label();
+            this.comboBoxOrigen = new System.Windows.Forms.ComboBox();
+            this.label17Config_Origen = new System.Windows.Forms.Label();
+            this.lblID2 = new System.Windows.Forms.Label();
             this.menuStrip2.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridViewClientesFANASA)).BeginInit();
             this.SuspendLayout();
@@ -77,14 +80,14 @@ namespace ABCFTPOracle
             // menúInicialToolStripMenuItem
             // 
             this.menúInicialToolStripMenuItem.Name = "menúInicialToolStripMenuItem";
-            this.menúInicialToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
+            this.menúInicialToolStripMenuItem.Size = new System.Drawing.Size(139, 22);
             this.menúInicialToolStripMenuItem.Text = "Menu Inicial";
             this.menúInicialToolStripMenuItem.Click += new System.EventHandler(this.menúInicialToolStripMenuItem_Click_1);
             // 
             // salisToolStripMenuItem
             // 
             this.salisToolStripMenuItem.Name = "salisToolStripMenuItem";
-            this.salisToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
+            this.salisToolStripMenuItem.Size = new System.Drawing.Size(139, 22);
             this.salisToolStripMenuItem.Text = "Salir";
             this.salisToolStripMenuItem.Click += new System.EventHandler(this.salisToolStripMenuItem_Click_1);
             // 
@@ -105,6 +108,7 @@ namespace ABCFTPOracle
             this.dataGridViewClientesFANASA.Name = "dataGridViewClientesFANASA";
             this.dataGridViewClientesFANASA.Size = new System.Drawing.Size(770, 150);
             this.dataGridViewClientesFANASA.TabIndex = 36;
+            this.dataGridViewClientesFANASA.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dataGridViewClientesFANASA_CellContentClick);
             // 
             // button3
             // 
@@ -117,6 +121,7 @@ namespace ABCFTPOracle
             this.button3.Text = "BORRAR";
             this.button3.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
             this.button3.UseVisualStyleBackColor = true;
+            this.button3.Click += new System.EventHandler(this.button3_Click_1);
             // 
             // button2
             // 
@@ -129,6 +134,7 @@ namespace ABCFTPOracle
             this.button2.Text = "NUEVO";
             this.button2.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
             this.button2.UseVisualStyleBackColor = true;
+            this.button2.Click += new System.EventHandler(this.button2_Click_1);
             // 
             // button1
             // 
@@ -141,41 +147,25 @@ namespace ABCFTPOracle
             this.button1.Text = "ACTUALIZAR";
             this.button1.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
             this.button1.UseVisualStyleBackColor = true;
+            this.button1.Click += new System.EventHandler(this.button1_Click_1);
             // 
             // lblID
             // 
             this.lblID.AutoSize = true;
-            this.lblID.Location = new System.Drawing.Point(466, 361);
+            this.lblID.Location = new System.Drawing.Point(479, 392);
             this.lblID.Name = "lblID";
             this.lblID.Size = new System.Drawing.Size(10, 13);
             this.lblID.TabIndex = 64;
             this.lblID.Text = "-";
             // 
-            // label7
+            // label7ID
             // 
-            this.label7.AutoSize = true;
-            this.label7.Location = new System.Drawing.Point(410, 361);
-            this.label7.Name = "label7";
-            this.label7.Size = new System.Drawing.Size(18, 13);
-            this.label7.TabIndex = 63;
-            this.label7.Text = "ID";
-            // 
-            // comboBoxOrigen
-            // 
-            this.comboBoxOrigen.FormattingEnabled = true;
-            this.comboBoxOrigen.Location = new System.Drawing.Point(445, 312);
-            this.comboBoxOrigen.Name = "comboBoxOrigen";
-            this.comboBoxOrigen.Size = new System.Drawing.Size(323, 21);
-            this.comboBoxOrigen.TabIndex = 62;
-            // 
-            // label6
-            // 
-            this.label6.AutoSize = true;
-            this.label6.Location = new System.Drawing.Point(324, 315);
-            this.label6.Name = "label6";
-            this.label6.Size = new System.Drawing.Size(106, 13);
-            this.label6.TabIndex = 61;
-            this.label6.Text = "Configuración Origen";
+            this.label7ID.AutoSize = true;
+            this.label7ID.Location = new System.Drawing.Point(442, 387);
+            this.label7ID.Name = "label7ID";
+            this.label7ID.Size = new System.Drawing.Size(18, 13);
+            this.label7ID.TabIndex = 63;
+            this.label7ID.Text = "ID";
             // 
             // txtBxDestino
             // 
@@ -184,30 +174,30 @@ namespace ABCFTPOracle
             this.txtBxDestino.Size = new System.Drawing.Size(323, 20);
             this.txtBxDestino.TabIndex = 60;
             // 
-            // label5
+            // label5Destino
             // 
-            this.label5.AutoSize = true;
-            this.label5.Location = new System.Drawing.Point(373, 265);
-            this.label5.Name = "label5";
-            this.label5.Size = new System.Drawing.Size(43, 13);
-            this.label5.TabIndex = 59;
-            this.label5.Text = "Destino";
+            this.label5Destino.AutoSize = true;
+            this.label5Destino.Location = new System.Drawing.Point(373, 265);
+            this.label5Destino.Name = "label5Destino";
+            this.label5Destino.Size = new System.Drawing.Size(43, 13);
+            this.label5Destino.TabIndex = 59;
+            this.label5Destino.Text = "Destino";
             // 
             // txtBxExt
             // 
-            this.txtBxExt.Location = new System.Drawing.Point(73, 358);
+            this.txtBxExt.Location = new System.Drawing.Point(73, 340);
             this.txtBxExt.Name = "txtBxExt";
             this.txtBxExt.Size = new System.Drawing.Size(213, 20);
             this.txtBxExt.TabIndex = 58;
             // 
-            // label4
+            // label4_Extencion
             // 
-            this.label4.AutoSize = true;
-            this.label4.Location = new System.Drawing.Point(15, 364);
-            this.label4.Name = "label4";
-            this.label4.Size = new System.Drawing.Size(53, 13);
-            this.label4.TabIndex = 57;
-            this.label4.Text = "Extensión";
+            this.label4_Extencion.AutoSize = true;
+            this.label4_Extencion.Location = new System.Drawing.Point(15, 346);
+            this.label4_Extencion.Name = "label4_Extencion";
+            this.label4_Extencion.Size = new System.Drawing.Size(53, 13);
+            this.label4_Extencion.TabIndex = 57;
+            this.label4_Extencion.Text = "Extensión";
             // 
             // txtBxField2
             // 
@@ -216,57 +206,102 @@ namespace ABCFTPOracle
             this.txtBxField2.Size = new System.Drawing.Size(213, 20);
             this.txtBxField2.TabIndex = 56;
             // 
-            // label2
+            // label2_Documento2
             // 
-            this.label2.AutoSize = true;
-            this.label2.Location = new System.Drawing.Point(15, 298);
-            this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(38, 13);
-            this.label2.TabIndex = 55;
-            this.label2.Text = "Field 2";
+            this.label2_Documento2.AutoSize = true;
+            this.label2_Documento2.Location = new System.Drawing.Point(15, 298);
+            this.label2_Documento2.Name = "label2_Documento2";
+            this.label2_Documento2.Size = new System.Drawing.Size(38, 13);
+            this.label2_Documento2.TabIndex = 55;
+            this.label2_Documento2.Text = "Field 2";
+            // 
+            // label1_Documento1
+            // 
+            this.label1_Documento1.AutoSize = true;
+            this.label1_Documento1.Location = new System.Drawing.Point(15, 265);
+            this.label1_Documento1.Name = "label1_Documento1";
+            this.label1_Documento1.Size = new System.Drawing.Size(38, 13);
+            this.label1_Documento1.TabIndex = 53;
+            this.label1_Documento1.Text = "Field 1";
             // 
             // txtBxField1
             // 
-            this.txtBxField1.Location = new System.Drawing.Point(73, 262);
+            this.txtBxField1.Location = new System.Drawing.Point(73, 258);
             this.txtBxField1.Name = "txtBxField1";
             this.txtBxField1.Size = new System.Drawing.Size(213, 20);
-            this.txtBxField1.TabIndex = 54;
+            this.txtBxField1.TabIndex = 68;
             // 
-            // label1
+            // txtBxDestinoRespaldo
             // 
-            this.label1.AutoSize = true;
-            this.label1.Location = new System.Drawing.Point(15, 265);
-            this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(38, 13);
-            this.label1.TabIndex = 53;
-            this.label1.Text = "Field 1";
+            this.txtBxDestinoRespaldo.Location = new System.Drawing.Point(462, 302);
+            this.txtBxDestinoRespaldo.Name = "txtBxDestinoRespaldo";
+            this.txtBxDestinoRespaldo.Size = new System.Drawing.Size(310, 20);
+            this.txtBxDestinoRespaldo.TabIndex = 110;
+            // 
+            // label6DEstinoRespaldo
+            // 
+            this.label6DEstinoRespaldo.AutoSize = true;
+            this.label6DEstinoRespaldo.Location = new System.Drawing.Point(365, 305);
+            this.label6DEstinoRespaldo.Name = "label6DEstinoRespaldo";
+            this.label6DEstinoRespaldo.Size = new System.Drawing.Size(91, 13);
+            this.label6DEstinoRespaldo.TabIndex = 111;
+            this.label6DEstinoRespaldo.Text = "Destino Respaldo";
+            // 
+            // comboBoxOrigen
+            // 
+            this.comboBoxOrigen.FormattingEnabled = true;
+            this.comboBoxOrigen.Location = new System.Drawing.Point(124, 384);
+            this.comboBoxOrigen.Name = "comboBoxOrigen";
+            this.comboBoxOrigen.Size = new System.Drawing.Size(287, 21);
+            this.comboBoxOrigen.TabIndex = 115;
+            // 
+            // label17Config_Origen
+            // 
+            this.label17Config_Origen.AutoSize = true;
+            this.label17Config_Origen.Location = new System.Drawing.Point(12, 387);
+            this.label17Config_Origen.Name = "label17Config_Origen";
+            this.label17Config_Origen.Size = new System.Drawing.Size(109, 13);
+            this.label17Config_Origen.TabIndex = 114;
+            this.label17Config_Origen.Text = "Configuración Origen ";
+            // 
+            // lblID2
+            // 
+            this.lblID2.AutoSize = true;
+            this.lblID2.Location = new System.Drawing.Point(491, 387);
+            this.lblID2.Name = "lblID2";
+            this.lblID2.Size = new System.Drawing.Size(10, 13);
+            this.lblID2.TabIndex = 134;
+            this.lblID2.Text = "-";
             // 
             // ClientesFANASA
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(950, 450);
+            this.Controls.Add(this.lblID2);
+            this.Controls.Add(this.comboBoxOrigen);
+            this.Controls.Add(this.label17Config_Origen);
+            this.Controls.Add(this.txtBxDestinoRespaldo);
+            this.Controls.Add(this.label6DEstinoRespaldo);
+            this.Controls.Add(this.txtBxField1);
             this.Controls.Add(this.button3);
             this.Controls.Add(this.button2);
             this.Controls.Add(this.button1);
-            this.Controls.Add(this.lblID);
-            this.Controls.Add(this.label7);
-            this.Controls.Add(this.comboBoxOrigen);
-            this.Controls.Add(this.label6);
+            this.Controls.Add(this.label7ID);
             this.Controls.Add(this.txtBxDestino);
-            this.Controls.Add(this.label5);
+            this.Controls.Add(this.label5Destino);
             this.Controls.Add(this.txtBxExt);
-            this.Controls.Add(this.label4);
+            this.Controls.Add(this.label4_Extencion);
             this.Controls.Add(this.txtBxField2);
-            this.Controls.Add(this.label2);
-            this.Controls.Add(this.txtBxField1);
-            this.Controls.Add(this.label1);
+            this.Controls.Add(this.label2_Documento2);
+            this.Controls.Add(this.label1_Documento1);
             this.Controls.Add(this.dataGridViewClientesFANASA);
             this.Controls.Add(this.label1Titulo);
             this.Controls.Add(this.menuStrip2);
             this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.Name = "ClientesFANASA";
             this.Text = "ClientesFANASA";
+            this.Load += new System.EventHandler(this.ClientesFANSA_Load);
             this.menuStrip2.ResumeLayout(false);
             this.menuStrip2.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridViewClientesFANASA)).EndInit();
@@ -287,16 +322,19 @@ namespace ABCFTPOracle
         private System.Windows.Forms.Button button2;
         private System.Windows.Forms.Button button1;
         private System.Windows.Forms.Label lblID;
-        private System.Windows.Forms.Label label7;
-        private System.Windows.Forms.ComboBox comboBoxOrigen;
-        private System.Windows.Forms.Label label6;
+        private System.Windows.Forms.Label label7ID;
         private System.Windows.Forms.TextBox txtBxDestino;
-        private System.Windows.Forms.Label label5;
+        private System.Windows.Forms.Label label5Destino;
         private System.Windows.Forms.TextBox txtBxExt;
-        private System.Windows.Forms.Label label4;
+        private System.Windows.Forms.Label label4_Extencion;
         private System.Windows.Forms.TextBox txtBxField2;
-        private System.Windows.Forms.Label label2;
+        private System.Windows.Forms.Label label2_Documento2;
+        private System.Windows.Forms.Label label1_Documento1;
         private System.Windows.Forms.TextBox txtBxField1;
-        private System.Windows.Forms.Label label1;
+        private System.Windows.Forms.TextBox txtBxDestinoRespaldo;
+        private System.Windows.Forms.Label label6DEstinoRespaldo;
+        private System.Windows.Forms.ComboBox comboBoxOrigen;
+        private System.Windows.Forms.Label label17Config_Origen;
+        private System.Windows.Forms.Label lblID2;
     }
 }

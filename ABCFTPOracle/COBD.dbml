@@ -420,4 +420,50 @@
       <Association Name="ConfiguracionOrigen_OrigenDatosFanasa" Member="ConfiguracionOrigen" ThisKey="iRegistroConfigOrigen" OtherKey="uiRegistroOrigen" Type="ConfiguracionOrigen" IsForeignKey="true" />
     </Type>
   </Table>
+  <Table Name="dbo.ConfiguracionOrigenClientesFANASA" Member="ConfiguracionOrigenClientesFANASA">
+    <Type Name="ConfiguracionOrigenClientesFANASA">
+      <Column Name="uiRegistroOrigen" Type="System.Int32" DbType="Int NOT NULL IDENTITY" IsPrimaryKey="true" IsDbGenerated="true" CanBeNull="false" />
+      <Column Name="sOrigen" Type="System.String" DbType="VarChar(250)" CanBeNull="true" />
+      <Column Name="sCorreo" Type="System.String" DbType="VarChar(250)" CanBeNull="true" />
+      <Column Name="sDestinatario" Type="System.String" DbType="VarChar(250)" CanBeNull="true" />
+      <Column Name="sAsunto" Type="System.String" DbType="VarChar(250)" CanBeNull="true" />
+      <Column Name="sDireccionIP" Type="System.String" DbType="VarChar(250)" CanBeNull="true" />
+      <Column Name="iPuerto" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="sPassword" Type="System.String" DbType="VarChar(250)" CanBeNull="true" />
+      <Association Name="ConfiguracionOrigenClientesFANASA_OrigenDatosClientesFANASA" Member="OrigenDatosClientesFANASA" ThisKey="uiRegistroOrigen" OtherKey="iRegistroConfigOrigen" Type="OrigenDatosClientesFANASA" />
+    </Type>
+  </Table>
+  <Table Name="dbo.OrigenDatosClientesFANASA" Member="OrigenDatosClientesFANASA">
+    <Type Name="OrigenDatosClientesFANASA">
+      <Column Name="idOrigenDatos" Type="System.Int32" DbType="Int NOT NULL" IsPrimaryKey="true" CanBeNull="false" />
+      <Column Name="field1" Type="System.String" DbType="VarChar(250)" CanBeNull="true" />
+      <Column Name="field2" Type="System.String" DbType="VarChar(250)" CanBeNull="true" />
+      <Column Name="Extension" Type="System.String" DbType="VarChar(50)" CanBeNull="true" />
+      <Column Name="Destino" Type="System.String" DbType="NVarChar(1500)" CanBeNull="true" />
+      <Column Name="iRegistroConfigOrigen" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="DestinoRespaldo" Type="System.String" DbType="NVarChar(150)" CanBeNull="true" />
+      <Association Name="OrigenDatosClientesFANASA_CtlCorreosClientesFANASA" Member="CtlCorreosClientesFANASA" ThisKey="idOrigenDatos" OtherKey="IdOrigenDatosClientesFANASA" Type="CtlCorreosClientesFANASA" />
+      <Association Name="ConfiguracionOrigenClientesFANASA_OrigenDatosClientesFANASA" Member="ConfiguracionOrigenClientesFANASA" ThisKey="iRegistroConfigOrigen" OtherKey="uiRegistroOrigen" Type="ConfiguracionOrigenClientesFANASA" IsForeignKey="true" />
+    </Type>
+  </Table>
+  <Table Name="dbo.CtlCorreosClientesFANASA" Member="CtlCorreosClientesFANASA">
+    <Type Name="CtlCorreosClientesFANASA">
+      <Column Name="idCorreos" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="IdOrigenDatosClientesFANASA" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="Correo" Type="System.String" DbType="NVarChar(250)" CanBeNull="true" />
+      <Association Name="OrigenDatosClientesFANASA_CtlCorreosClientesFANASA" Member="OrigenDatosClientesFANASA" ThisKey="IdOrigenDatosClientesFANASA" OtherKey="idOrigenDatos" Type="OrigenDatosClientesFANASA" IsForeignKey="true" />
+    </Type>
+  </Table>
+  <Table Name="dbo.LogClientesFANASA" Member="LogClientesFANASA">
+    <Type Name="LogClientesFANASA">
+      <Column Name="idLog" Type="System.String" DbType="NVarChar(200) NOT NULL" IsPrimaryKey="true" CanBeNull="false" />
+      <Column Name="Titulo" Type="System.String" DbType="NVarChar(250)" CanBeNull="true" />
+      <Column Name="ArchivoClientesFANASA" Type="System.String" DbType="NVarChar(250)" CanBeNull="true" />
+      <Column Name="DestinoOneDrive" Type="System.String" DbType="NVarChar(250)" CanBeNull="true" />
+      <Column Name="DestinoFTP" Type="System.String" DbType="NVarChar(250)" CanBeNull="true" />
+      <Column Name="Estatus" Type="System.String" DbType="NVarChar(250)" CanBeNull="true" />
+      <Column Name="DescripcionError" Type="System.String" DbType="NVarChar(1550)" CanBeNull="true" />
+      <Column Name="Fecha" Type="System.DateTime" DbType="DateTime" CanBeNull="true" />
+    </Type>
+  </Table>
 </Database>

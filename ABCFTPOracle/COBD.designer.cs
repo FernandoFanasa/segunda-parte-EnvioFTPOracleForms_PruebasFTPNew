@@ -129,6 +129,15 @@ namespace ABCFTPOracle
     partial void InsertOrigenDatosFanasa(OrigenDatosFanasa instance);
     partial void UpdateOrigenDatosFanasa(OrigenDatosFanasa instance);
     partial void DeleteOrigenDatosFanasa(OrigenDatosFanasa instance);
+    partial void InsertConfiguracionOrigenClientesFANASA(ConfiguracionOrigenClientesFANASA instance);
+    partial void UpdateConfiguracionOrigenClientesFANASA(ConfiguracionOrigenClientesFANASA instance);
+    partial void DeleteConfiguracionOrigenClientesFANASA(ConfiguracionOrigenClientesFANASA instance);
+    partial void InsertOrigenDatosClientesFANASA(OrigenDatosClientesFANASA instance);
+    partial void UpdateOrigenDatosClientesFANASA(OrigenDatosClientesFANASA instance);
+    partial void DeleteOrigenDatosClientesFANASA(OrigenDatosClientesFANASA instance);
+    partial void InsertLogClientesFANASA(LogClientesFANASA instance);
+    partial void UpdateLogClientesFANASA(LogClientesFANASA instance);
+    partial void DeleteLogClientesFANASA(LogClientesFANASA instance);
     #endregion
 		
 		public COBDDataContext() : 
@@ -177,7 +186,7 @@ namespace ABCFTPOracle
 			}
 		}
 		
-		public new System.Data.Linq.Table<Log> Log
+		public System.Data.Linq.Table<Log> Log
 		{
 			get
 			{
@@ -424,38 +433,38 @@ namespace ABCFTPOracle
 				return this.GetTable<OrigenDatosFanasa>();
 			}
 		}
-
+		
+		public System.Data.Linq.Table<ConfiguracionOrigenClientesFANASA> ConfiguracionOrigenClientesFANASA
+		{
+			get
+			{
+				return this.GetTable<ConfiguracionOrigenClientesFANASA>();
+			}
+		}
+		
 		public System.Data.Linq.Table<OrigenDatosClientesFANASA> OrigenDatosClientesFANASA
 		{
 			get
 			{
 				return this.GetTable<OrigenDatosClientesFANASA>();
 			}
-		} 
-
+		}
+		
 		public System.Data.Linq.Table<CtlCorreosClientesFANASA> CtlCorreosClientesFANASA
-        {
+		{
 			get
-            {
+			{
 				return this.GetTable<CtlCorreosClientesFANASA>();
-            }
-        }
-
-		public System.Data.Linq.Table<ConfiguracionOrigenClientesFANASA> ConfiguracionOrigenClientesFANASA
-        {
-			get
-            {
-				return this.GetTable<ConfiguracionOrigenClientesFANASA>();
-            }
-        }
-
+			}
+		}
+		
 		public System.Data.Linq.Table<LogClientesFANASA> LogClientesFANASA
-        {
-            get
-            {
+		{
+			get
+			{
 				return this.GetTable<LogClientesFANASA>();
-            }
-        }
+			}
+		}
 	}
 	
 	[global::System.Data.Linq.Mapping.TableAttribute(Name="dbo.OrigenDatos")]
@@ -2628,9 +2637,7 @@ namespace ABCFTPOracle
 			}
 		}
 	}
-
-	////Benavides
-
+	
 	[global::System.Data.Linq.Mapping.TableAttribute(Name="dbo.OrigenDatosBenavides")]
 	public partial class OrigenDatosBenavides : INotifyPropertyChanging, INotifyPropertyChanged
 	{
@@ -3654,9 +3661,7 @@ namespace ABCFTPOracle
 			}
 		}
 	}
-
-	////Etiquetas
-
+	
 	[global::System.Data.Linq.Mapping.TableAttribute(Name="dbo.CtlCorreosEtiquetas")]
 	public partial class CtlCorreosEtiquetas : INotifyPropertyChanging, INotifyPropertyChanged
 	{
@@ -4824,9 +4829,7 @@ namespace ABCFTPOracle
 			}
 		}
 	}
-
-
-	////3WM
+	
 	[global::System.Data.Linq.Mapping.TableAttribute(Name="dbo.CtlCorreos3WM")]
 	public partial class CtlCorreos3WM : INotifyPropertyChanging, INotifyPropertyChanged
 	{
@@ -5716,7 +5719,7 @@ namespace ABCFTPOracle
 		}
 		
 		[global::System.Data.Linq.Mapping.AssociationAttribute(Name="OrigenDatos3WM_CtlCorreos3WM", Storage="_CtlCorreos3WM", ThisKey="IdOrigenDatos", OtherKey="IdOrigenDatos3WM")]
-		public EntitySet<CtlCorreos3WM> CtlCorreos3WM 
+		public EntitySet<CtlCorreos3WM> CtlCorreos3WM
 		{
 			get
 			{
@@ -5745,7 +5748,7 @@ namespace ABCFTPOracle
 					if ((previousValue != null))
 					{
 						this._ConfiguracionOrigen3WM.Entity = null;
-						previousValue.OrigenDatos3WM.Remove(this); 
+						previousValue.OrigenDatos3WM.Remove(this);
 					}
 					this._ConfiguracionOrigen3WM.Entity = value;
 					if ((value != null))
@@ -6018,7 +6021,7 @@ namespace ABCFTPOracle
 			{
 				this._OrigenDatos3WM.Assign(value);
 			}
-		} 
+		}
 		
 		public event PropertyChangingEventHandler PropertyChanging;
 		
@@ -6052,10 +6055,7 @@ namespace ABCFTPOracle
 			entity.ConfiguracionOrigen3WM = null;
 		}
 	}
-
-
-	//// CarvajalFESA
-
+	
 	[global::System.Data.Linq.Mapping.TableAttribute(Name="dbo.OrigenDatosCarvajalFANASA")]
 	public partial class OrigenDatosCarvajalFANASA : INotifyPropertyChanging, INotifyPropertyChanged
 	{
@@ -8315,7 +8315,7 @@ namespace ABCFTPOracle
 			}
 		}
 	}
-
+	
 	[global::System.Data.Linq.Mapping.TableAttribute(Name="dbo.OrigenDatosFanasa")]
 	public partial class OrigenDatosFanasa : INotifyPropertyChanging, INotifyPropertyChanged
 	{
@@ -8926,145 +8926,236 @@ namespace ABCFTPOracle
 			entity.OrigenDatosFanasa = null;
 		}
 	}
-
-
-	////Correspondiente a Clientes FANASA
 	
-
-	[global::System.Data.Linq.Mapping.TableAttribute(Name = "dbo.CtlCorreosClientesFANASA")]
-	public partial class CtlCorreosClientesFANASA : INotifyPropertyChanging, INotifyPropertyChanged
+	[global::System.Data.Linq.Mapping.TableAttribute(Name="dbo.ConfiguracionOrigenClientesFANASA")]
+	public partial class ConfiguracionOrigenClientesFANASA : INotifyPropertyChanging, INotifyPropertyChanged
 	{
-
+		
 		private static PropertyChangingEventArgs emptyChangingEventArgs = new PropertyChangingEventArgs(String.Empty);
-
-		private int _IdCorreos;
-
-		private System.Nullable<int> _IdOrigenDatosClientesFANASA;
-
-		private string _Correo;
-
-		private EntityRef<OrigenDatosClientesFANASA> _OrigenDatosClientesFANASA;
-
-		#region Definiciones de métodos de extensibilidad
-		partial void OnLoaded();
-		partial void OnValidate(System.Data.Linq.ChangeAction action);
-		partial void OnCreated();
-		partial void OnIdCorreosChanging(int value);
-		partial void OnIdCorreosChanged();
-		partial void OnIdOrigenDatosClientesFANASAChanging(System.Nullable<int> value);
-		partial void OnIdOrigenDatosClientesFANASAChanged();
-		partial void OnCorreoChanging(string value);
-		partial void OnCorreoChanged();
-		#endregion
-
-		public CtlCorreosClientesFANASA()
+		
+		private int _uiRegistroOrigen;
+		
+		private string _sOrigen;
+		
+		private string _sCorreo;
+		
+		private string _sDestinatario;
+		
+		private string _sAsunto;
+		
+		private string _sDireccionIP;
+		
+		private System.Nullable<int> _iPuerto;
+		
+		private string _sPassword;
+		
+		private EntitySet<OrigenDatosClientesFANASA> _OrigenDatosClientesFANASA;
+		
+    #region Definiciones de métodos de extensibilidad
+    partial void OnLoaded();
+    partial void OnValidate(System.Data.Linq.ChangeAction action);
+    partial void OnCreated();
+    partial void OnuiRegistroOrigenChanging(int value);
+    partial void OnuiRegistroOrigenChanged();
+    partial void OnsOrigenChanging(string value);
+    partial void OnsOrigenChanged();
+    partial void OnsCorreoChanging(string value);
+    partial void OnsCorreoChanged();
+    partial void OnsDestinatarioChanging(string value);
+    partial void OnsDestinatarioChanged();
+    partial void OnsAsuntoChanging(string value);
+    partial void OnsAsuntoChanged();
+    partial void OnsDireccionIPChanging(string value);
+    partial void OnsDireccionIPChanged();
+    partial void OniPuertoChanging(System.Nullable<int> value);
+    partial void OniPuertoChanged();
+    partial void OnsPasswordChanging(string value);
+    partial void OnsPasswordChanged();
+    #endregion
+		
+		public ConfiguracionOrigenClientesFANASA()
 		{
-			this._OrigenDatosClientesFANASA = default(EntityRef<OrigenDatosClientesFANASA>);
+			this._OrigenDatosClientesFANASA = new EntitySet<OrigenDatosClientesFANASA>(new Action<OrigenDatosClientesFANASA>(this.attach_OrigenDatosClientesFANASA), new Action<OrigenDatosClientesFANASA>(this.detach_OrigenDatosClientesFANASA));
 			OnCreated();
 		}
-
-		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage = "_IdCorreos", AutoSync = AutoSync.OnInsert, DbType = "Int NOT NULL IDENTITY", IsPrimaryKey = true, IsDbGenerated = true)]
-		public int IdCorreos
+		
+		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_uiRegistroOrigen", AutoSync=AutoSync.OnInsert, DbType="Int NOT NULL IDENTITY", IsPrimaryKey=true, IsDbGenerated=true)]
+		public int uiRegistroOrigen
 		{
 			get
 			{
-				return this._IdCorreos;
+				return this._uiRegistroOrigen;
 			}
 			set
 			{
-				if ((this._IdCorreos != value))
+				if ((this._uiRegistroOrigen != value))
 				{
-					this.OnIdCorreosChanging(value);
+					this.OnuiRegistroOrigenChanging(value);
 					this.SendPropertyChanging();
-					this._IdCorreos = value;
-					this.SendPropertyChanged("IdCorreos");
-					this.OnIdCorreosChanged();
+					this._uiRegistroOrigen = value;
+					this.SendPropertyChanged("uiRegistroOrigen");
+					this.OnuiRegistroOrigenChanged();
 				}
 			}
 		}
-
-		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage = "_IdOrigenDatosClientesFANASA", DbType = "Int")]
-		public System.Nullable<int> IdOrigenDatosClientesFANASA
+		
+		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_sOrigen", DbType="VarChar(250)")]
+		public string sOrigen
 		{
 			get
 			{
-				return this._IdOrigenDatosClientesFANASA;
+				return this._sOrigen;
 			}
 			set
 			{
-				if ((this._IdOrigenDatosClientesFANASA != value))
+				if ((this._sOrigen != value))
 				{
-					if (this._OrigenDatosClientesFANASA.HasLoadedOrAssignedValue)
-					{
-						throw new System.Data.Linq.ForeignKeyReferenceAlreadyHasValueException();
-					}
-					this.OnIdOrigenDatosClientesFANASAChanging(value);
+					this.OnsOrigenChanging(value);
 					this.SendPropertyChanging();
-					this._IdOrigenDatosClientesFANASA = value;
-					this.SendPropertyChanged("IdOrigenDatosClientesFANASA");
-					this.OnIdOrigenDatosClientesFANASAChanged();
+					this._sOrigen = value;
+					this.SendPropertyChanged("sOrigen");
+					this.OnsOrigenChanged();
 				}
 			}
 		}
-
-		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage = "_Correo", DbType = "NVarChar(250)")]
-		public string Correo
+		
+		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_sCorreo", DbType="VarChar(250)")]
+		public string sCorreo
 		{
 			get
 			{
-				return this._Correo;
+				return this._sCorreo;
 			}
 			set
 			{
-				if ((this._Correo != value))
+				if ((this._sCorreo != value))
 				{
-					this.OnCorreoChanging(value);
+					this.OnsCorreoChanging(value);
 					this.SendPropertyChanging();
-					this._Correo = value;
-					this.SendPropertyChanged("Correo");
-					this.OnCorreoChanged();
+					this._sCorreo = value;
+					this.SendPropertyChanged("sCorreo");
+					this.OnsCorreoChanged();
 				}
 			}
 		}
-
-		[global::System.Data.Linq.Mapping.AssociationAttribute(Name = "OrigenDatosClientesFANASA_CtlCorreosClientesFANASA", Storage = "_OrigenDatosClientesFANASA", ThisKey = "IdOrigenDatosClientesFANASA", OtherKey = "IdOrigenDatos", IsForeignKey = true)]
-		public OrigenDatosClientesFANASA OrigenDatosClientesFANASA
+		
+		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_sDestinatario", DbType="VarChar(250)")]
+		public string sDestinatario
 		{
 			get
 			{
-				return this._OrigenDatosClientesFANASA.Entity;
+				return this._sDestinatario;
 			}
 			set
 			{
-				OrigenDatosClientesFANASA previousValue = this._OrigenDatosClientesFANASA.Entity;
-				if (((previousValue != value)
-							|| (this._OrigenDatosClientesFANASA.HasLoadedOrAssignedValue == false)))
+				if ((this._sDestinatario != value))
 				{
+					this.OnsDestinatarioChanging(value);
 					this.SendPropertyChanging();
-					if ((previousValue != null))
-					{
-						this._OrigenDatosClientesFANASA.Entity = null;
-						previousValue.CtlCorreosClientesFANASA.Remove(this);
-					}
-					this._OrigenDatosClientesFANASA.Entity = value;
-					if ((value != null))
-					{
-						value.CtlCorreosClientesFANASA.Add(this);
-						this._IdOrigenDatosClientesFANASA = value.IdOrigenDatos;
-					}
-					else
-					{
-						this._IdOrigenDatosClientesFANASA = default(Nullable<int>);
-					}
-					this.SendPropertyChanged("OrigenDatosClientesFANASA");
+					this._sDestinatario = value;
+					this.SendPropertyChanged("sDestinatario");
+					this.OnsDestinatarioChanged();
 				}
 			}
 		}
-
+		
+		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_sAsunto", DbType="VarChar(250)")]
+		public string sAsunto
+		{
+			get
+			{
+				return this._sAsunto;
+			}
+			set
+			{
+				if ((this._sAsunto != value))
+				{
+					this.OnsAsuntoChanging(value);
+					this.SendPropertyChanging();
+					this._sAsunto = value;
+					this.SendPropertyChanged("sAsunto");
+					this.OnsAsuntoChanged();
+				}
+			}
+		}
+		
+		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_sDireccionIP", DbType="VarChar(250)")]
+		public string sDireccionIP
+		{
+			get
+			{
+				return this._sDireccionIP;
+			}
+			set
+			{
+				if ((this._sDireccionIP != value))
+				{
+					this.OnsDireccionIPChanging(value);
+					this.SendPropertyChanging();
+					this._sDireccionIP = value;
+					this.SendPropertyChanged("sDireccionIP");
+					this.OnsDireccionIPChanged();
+				}
+			}
+		}
+		
+		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_iPuerto", DbType="Int")]
+		public System.Nullable<int> iPuerto
+		{
+			get
+			{
+				return this._iPuerto;
+			}
+			set
+			{
+				if ((this._iPuerto != value))
+				{
+					this.OniPuertoChanging(value);
+					this.SendPropertyChanging();
+					this._iPuerto = value;
+					this.SendPropertyChanged("iPuerto");
+					this.OniPuertoChanged();
+				}
+			}
+		}
+		
+		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_sPassword", DbType="VarChar(250)")]
+		public string sPassword
+		{
+			get
+			{
+				return this._sPassword;
+			}
+			set
+			{
+				if ((this._sPassword != value))
+				{
+					this.OnsPasswordChanging(value);
+					this.SendPropertyChanging();
+					this._sPassword = value;
+					this.SendPropertyChanged("sPassword");
+					this.OnsPasswordChanged();
+				}
+			}
+		}
+		
+		[global::System.Data.Linq.Mapping.AssociationAttribute(Name="ConfiguracionOrigenClientesFANASA_OrigenDatosClientesFANASA", Storage="_OrigenDatosClientesFANASA", ThisKey="uiRegistroOrigen", OtherKey="iRegistroConfigOrigen")]
+		public EntitySet<OrigenDatosClientesFANASA> OrigenDatosClientesFANASA
+		{
+			get
+			{
+				return this._OrigenDatosClientesFANASA;
+			}
+			set
+			{
+				this._OrigenDatosClientesFANASA.Assign(value);
+			}
+		}
+		
 		public event PropertyChangingEventHandler PropertyChanging;
-
+		
 		public event PropertyChangedEventHandler PropertyChanged;
-
+		
 		protected virtual void SendPropertyChanging()
 		{
 			if ((this.PropertyChanging != null))
@@ -9072,7 +9163,7 @@ namespace ABCFTPOracle
 				this.PropertyChanging(this, emptyChangingEventArgs);
 			}
 		}
-
+		
 		protected virtual void SendPropertyChanged(String propertyName)
 		{
 			if ((this.PropertyChanged != null))
@@ -9080,416 +9171,129 @@ namespace ABCFTPOracle
 				this.PropertyChanged(this, new PropertyChangedEventArgs(propertyName));
 			}
 		}
-	}
-
-	[global::System.Data.Linq.Mapping.TableAttribute(Name = "dbo.LogClientesFANASA")]
-	public partial class LogClientesFANASA : INotifyPropertyChanging, INotifyPropertyChanged
-	{
-
-		private static PropertyChangingEventArgs emptyChangingEventArgs = new PropertyChangingEventArgs(String.Empty);
-
-		private System.Guid _IdLog;
-
-		private string _Titulo;
-
-		private string _Tipo;
-
-		private string _ArchivoOracle;
-
-		private string _DestinoOneDrive;
-
-		private string _DestinoFTP;
-
-		private string _Estatus;
-
-		private string _DescripcionError;
-
-		private System.Nullable<System.DateTime> _Fecha;
-
-		#region Definiciones de métodos de extensibilidad
-		partial void OnLoaded();
-		partial void OnValidate(System.Data.Linq.ChangeAction action);
-		partial void OnCreated();
-		partial void OnIdLogChanging(System.Guid value);
-		partial void OnIdLogChanged();
-		partial void OnTituloChanging(string value);
-		partial void OnTituloChanged();
-		partial void OnTipoChanging(string value);
-		partial void OnTipoChanged();
-		partial void OnArchivoOracleChanging(string value);
-		partial void OnArchivoOracleChanged();
-		partial void OnDestinoOneDriveChanging(string value);
-		partial void OnDestinoOneDriveChanged();
-		partial void OnDestinoFTPChanging(string value);
-		partial void OnDestinoFTPChanged();
-		partial void OnEstatusChanging(string value);
-		partial void OnEstatusChanged();
-		partial void OnDescripcionErrorChanging(string value);
-		partial void OnDescripcionErrorChanged();
-		partial void OnFechaChanging(System.Nullable<System.DateTime> value);
-		partial void OnFechaChanged();
-		#endregion
-
-		public LogClientesFANASA()
+		
+		private void attach_OrigenDatosClientesFANASA(OrigenDatosClientesFANASA entity)
 		{
-			OnCreated();
+			this.SendPropertyChanging();
+			entity.ConfiguracionOrigenClientesFANASA = this;
 		}
-
-		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage = "_IdLog", DbType = "UniqueIdentifier NOT NULL", IsPrimaryKey = true)]
-		public System.Guid IdLog
+		
+		private void detach_OrigenDatosClientesFANASA(OrigenDatosClientesFANASA entity)
 		{
-			get
-			{
-				return this._IdLog;
-			}
-			set
-			{
-				if ((this._IdLog != value))
-				{
-					this.OnIdLogChanging(value);
-					this.SendPropertyChanging();
-					this._IdLog = value;
-					this.SendPropertyChanged("IdLog");
-					this.OnIdLogChanged();
-				}
-			}
-		}
-
-		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage = "_Titulo", DbType = "NVarChar(250)")]
-		public string Titulo
-		{
-			get
-			{
-				return this._Titulo;
-			}
-			set
-			{
-				if ((this._Titulo != value))
-				{
-					this.OnTituloChanging(value);
-					this.SendPropertyChanging();
-					this._Titulo = value;
-					this.SendPropertyChanged("Titulo");
-					this.OnTituloChanged();
-				}
-			}
-		}
-
-		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage = "_Tipo", DbType = "NVarChar(150)")]
-		public string Tipo
-		{
-			get
-			{
-				return this._Tipo;
-			}
-			set
-			{
-				if ((this._Tipo != value))
-				{
-					this.OnTipoChanging(value);
-					this.SendPropertyChanging();
-					this._Tipo = value;
-					this.SendPropertyChanged("Tipo");
-					this.OnTipoChanged();
-				}
-			}
-		}
-
-		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage = "_ArchivoOracle", DbType = "NVarChar(250)")]
-		public string ArchivoOracle
-		{
-			get
-			{
-				return this._ArchivoOracle;
-			}
-			set
-			{
-				if ((this._ArchivoOracle != value))
-				{
-					this.OnArchivoOracleChanging(value);
-					this.SendPropertyChanging();
-					this._ArchivoOracle = value;
-					this.SendPropertyChanged("ArchivoOracle");
-					this.OnArchivoOracleChanged();
-				}
-			}
-		}
-
-		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage = "_DestinoOneDrive", DbType = "NVarChar(250)")]
-		public string DestinoOneDrive
-		{
-			get
-			{
-				return this._DestinoOneDrive;
-			}
-			set
-			{
-				if ((this._DestinoOneDrive != value))
-				{
-					this.OnDestinoOneDriveChanging(value);
-					this.SendPropertyChanging();
-					this._DestinoOneDrive = value;
-					this.SendPropertyChanged("DestinoOneDrive");
-					this.OnDestinoOneDriveChanged();
-				}
-			}
-		}
-
-		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage = "_DestinoFTP", DbType = "NVarChar(250)")]
-		public string DestinoFTP
-		{
-			get
-			{
-				return this._DestinoFTP;
-			}
-			set
-			{
-				if ((this._DestinoFTP != value))
-				{
-					this.OnDestinoFTPChanging(value);
-					this.SendPropertyChanging();
-					this._DestinoFTP = value;
-					this.SendPropertyChanged("DestinoFTP");
-					this.OnDestinoFTPChanged();
-				}
-			}
-		}
-
-		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage = "_Estatus", DbType = "NVarChar(150)")]
-		public string Estatus
-		{
-			get
-			{
-				return this._Estatus;
-			}
-			set
-			{
-				if ((this._Estatus != value))
-				{
-					this.OnEstatusChanging(value);
-					this.SendPropertyChanging();
-					this._Estatus = value;
-					this.SendPropertyChanged("Estatus");
-					this.OnEstatusChanged();
-				}
-			}
-		}
-
-		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage = "_DescripcionError", DbType = "NVarChar(1550)")]
-		public string DescripcionError
-		{
-			get
-			{
-				return this._DescripcionError;
-			}
-			set
-			{
-				if ((this._DescripcionError != value))
-				{
-					this.OnDescripcionErrorChanging(value);
-					this.SendPropertyChanging();
-					this._DescripcionError = value;
-					this.SendPropertyChanged("DescripcionError");
-					this.OnDescripcionErrorChanged();
-				}
-			}
-		}
-
-		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage = "_Fecha", DbType = "DateTime")]
-		public System.Nullable<System.DateTime> Fecha
-		{
-			get
-			{
-				return this._Fecha;
-			}
-			set
-			{
-				if ((this._Fecha != value))
-				{
-					this.OnFechaChanging(value);
-					this.SendPropertyChanging();
-					this._Fecha = value;
-					this.SendPropertyChanged("Fecha");
-					this.OnFechaChanged();
-				}
-			}
-		}
-
-		public event PropertyChangingEventHandler PropertyChanging;
-
-		public event PropertyChangedEventHandler PropertyChanged;
-
-		protected virtual void SendPropertyChanging()
-		{
-			if ((this.PropertyChanging != null))
-			{
-				this.PropertyChanging(this, emptyChangingEventArgs);
-			}
-		}
-
-		protected virtual void SendPropertyChanged(String propertyName)
-		{
-			if ((this.PropertyChanged != null))
-			{
-				this.PropertyChanged(this, new PropertyChangedEventArgs(propertyName));
-			}
+			this.SendPropertyChanging();
+			entity.ConfiguracionOrigenClientesFANASA = null;
 		}
 	}
-
-	[global::System.Data.Linq.Mapping.TableAttribute(Name = "dbo.OrigenDatosClientesFANASA")]
+	
+	[global::System.Data.Linq.Mapping.TableAttribute(Name="dbo.OrigenDatosClientesFANASA")]
 	public partial class OrigenDatosClientesFANASA : INotifyPropertyChanging, INotifyPropertyChanged
 	{
-
+		
 		private static PropertyChangingEventArgs emptyChangingEventArgs = new PropertyChangingEventArgs(String.Empty);
-
-		private int _IdOrigenDatos;
-
-		private string _Field1;
-
-		private string _Field2;
-
+		
+		private int _idOrigenDatos;
+		
+		private string _field1;
+		
+		private string _field2;
+		
 		private string _Extension;
-
+		
 		private string _Destino;
-
-		private string _IPFTP;
-
-		private string _UserFTP;
-
-		private string _PassFTP;
-
-		private string _DirectorioFTP;
-
-		private System.Nullable<bool> _FTPSeguro;
-
-		private string _Puerto;
-
-		private System.Nullable<bool> _AdjuntarArchivo;
-
-		private string _EnvioPDF;
-
-		private System.Nullable<bool> _ModoActivo;
-
+		
 		private System.Nullable<int> _iRegistroConfigOrigen;
-
-		private System.Nullable<bool> _bFANASA;
-
-		private System.Nullable<bool> _bFESA;
-
-		private EntitySet<CtlCorreosClientesFANASA> _CtlCorreosClientesFANASA;
-
+		
+		private string _DestinoRespaldo;
+		
 		private EntityRef<ConfiguracionOrigenClientesFANASA> _ConfiguracionOrigenClientesFANASA;
-
-		#region Definiciones de métodos de extensibilidad
-		partial void OnLoaded();
-		partial void OnValidate(System.Data.Linq.ChangeAction action);
-		partial void OnCreated();
-		partial void OnIdOrigenDatosChanging(int value);
-		partial void OnIdOrigenDatosChanged();
-		partial void OnField1Changing(string value);
-		partial void OnField1Changed();
-		partial void OnField2Changing(string value);
-		partial void OnField2Changed();
-		partial void OnExtensionChanging(string value);
-		partial void OnExtensionChanged();
-		partial void OnDestinoChanging(string value);
-		partial void OnDestinoChanged();
-		partial void OnDestinoFTPPasoChanging(string value);
-		partial void OnDestinoFTPPasoChanged();
-		partial void OnIPFTPChanging(string value);
-		partial void OnIPFTPChanged();
-		partial void OnUserFTPChanging(string value);
-		partial void OnUserFTPChanged();
-		partial void OnPassFTPChanging(string value);
-		partial void OnPassFTPChanged();
-		partial void OnDirectorioFTPChanging(string value);
-		partial void OnDirectorioFTPChanged();
-		partial void OnFTPSeguroChanging(System.Nullable<bool> value);
-		partial void OnFTPSeguroChanged();
-		partial void OnPuertoChanging(string value);
-		partial void OnPuertoChanged();
-		partial void OnAdjuntarArchivoChanging(System.Nullable<bool> value);
-		partial void OnAdjuntarArchivoChanged();
-		partial void OnEnvioPDFChanging(string value);
-		partial void OnEnvioPDFChanged();
-		partial void OnModoActivoChanging(System.Nullable<bool> value);
-		partial void OnModoActivoChanged();
-		partial void OniRegistroConfigOrigenChanging(System.Nullable<int> value);
-		partial void OniRegistroConfigOrigenChanged();
-		partial void OnbFANASAChanging(System.Nullable<bool> value);
-		partial void OnbFANASAChanged();
-		partial void OnbFESAChanging(System.Nullable<bool> value);
-		partial void OnbFESAChanged();
-		#endregion
-
+		
+    #region Definiciones de métodos de extensibilidad
+    partial void OnLoaded();
+    partial void OnValidate(System.Data.Linq.ChangeAction action);
+    partial void OnCreated();
+    partial void OnidOrigenDatosChanging(int value);
+    partial void OnidOrigenDatosChanged();
+    partial void Onfield1Changing(string value);
+    partial void Onfield1Changed();
+    partial void Onfield2Changing(string value);
+    partial void Onfield2Changed();
+    partial void OnExtensionChanging(string value);
+    partial void OnExtensionChanged();
+    partial void OnDestinoChanging(string value);
+    partial void OnDestinoChanged();
+    partial void OniRegistroConfigOrigenChanging(System.Nullable<int> value);
+    partial void OniRegistroConfigOrigenChanged();
+    partial void OnDestinoRespaldoChanging(string value);
+    partial void OnDestinoRespaldoChanged();
+    #endregion
+		
 		public OrigenDatosClientesFANASA()
 		{
-			this._CtlCorreosClientesFANASA = new EntitySet<CtlCorreosClientesFANASA>(new Action<CtlCorreosClientesFANASA>(this.attach_CtlCorreosClientesFANASA), new Action<CtlCorreosClientesFANASA>(this.detach_CtlCorreosClientesFANASA));
 			this._ConfiguracionOrigenClientesFANASA = default(EntityRef<ConfiguracionOrigenClientesFANASA>);
 			OnCreated();
 		}
-
-		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage = "_IdOrigenDatos", AutoSync = AutoSync.OnInsert, DbType = "Int NOT NULL IDENTITY", IsPrimaryKey = true, IsDbGenerated = true)]
-		public int IdOrigenDatos
+		
+		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_idOrigenDatos", DbType="Int NOT NULL", IsPrimaryKey=true)]
+		public int idOrigenDatos
 		{
 			get
 			{
-				return this._IdOrigenDatos;
+				return this._idOrigenDatos;
 			}
 			set
 			{
-				if ((this._IdOrigenDatos != value))
+				if ((this._idOrigenDatos != value))
 				{
-					this.OnIdOrigenDatosChanging(value);
+					this.OnidOrigenDatosChanging(value);
 					this.SendPropertyChanging();
-					this._IdOrigenDatos = value;
-					this.SendPropertyChanged("IdOrigenDatos");
-					this.OnIdOrigenDatosChanged();
+					this._idOrigenDatos = value;
+					this.SendPropertyChanged("idOrigenDatos");
+					this.OnidOrigenDatosChanged();
 				}
 			}
 		}
-
-		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage = "_Field1", DbType = "NVarChar(250)")]
-		public string Field1
+		
+		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_field1", DbType="VarChar(250)")]
+		public string field1
 		{
 			get
 			{
-				return this._Field1;
+				return this._field1;
 			}
 			set
 			{
-				if ((this._Field1 != value))
+				if ((this._field1 != value))
 				{
-					this.OnField1Changing(value);
+					this.Onfield1Changing(value);
 					this.SendPropertyChanging();
-					this._Field1 = value;
-					this.SendPropertyChanged("Field1");
-					this.OnField1Changed();
+					this._field1 = value;
+					this.SendPropertyChanged("field1");
+					this.Onfield1Changed();
 				}
 			}
 		}
-
-		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage = "_Field2", DbType = "NVarChar(250)")]
-		public string Field2
+		
+		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_field2", DbType="VarChar(250)")]
+		public string field2
 		{
 			get
 			{
-				return this._Field2;
+				return this._field2;
 			}
 			set
 			{
-				if ((this._Field2 != value))
+				if ((this._field2 != value))
 				{
-					this.OnField2Changing(value);
+					this.Onfield2Changing(value);
 					this.SendPropertyChanging();
-					this._Field2 = value;
-					this.SendPropertyChanged("Field2");
-					this.OnField2Changed();
+					this._field2 = value;
+					this.SendPropertyChanged("field2");
+					this.Onfield2Changed();
 				}
 			}
 		}
-
-		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage = "_Extension", DbType = "NVarChar(50)")]
+		
+		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_Extension", DbType="VarChar(50)")]
 		public string Extension
 		{
 			get
@@ -9508,8 +9312,8 @@ namespace ABCFTPOracle
 				}
 			}
 		}
-
-		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage = "_Destino", DbType = "NVarChar(1500)")]
+		
+		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_Destino", DbType="NVarChar(1500)")]
 		public string Destino
 		{
 			get
@@ -9528,189 +9332,8 @@ namespace ABCFTPOracle
 				}
 			}
 		}
-
-
-		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage = "_IPFTP", DbType = "NVarChar(150)")]
-		public string IPFTP
-		{
-			get
-			{
-				return this._IPFTP;
-			}
-			set
-			{
-				if ((this._IPFTP != value))
-				{
-					this.OnIPFTPChanging(value);
-					this.SendPropertyChanging();
-					this._IPFTP = value;
-					this.SendPropertyChanged("IPFTP");
-					this.OnIPFTPChanged();
-				}
-			}
-		}
-
-		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage = "_UserFTP", DbType = "NVarChar(150)")]
-		public string UserFTP
-		{
-			get
-			{
-				return this._UserFTP;
-			}
-			set
-			{
-				if ((this._UserFTP != value))
-				{
-					this.OnUserFTPChanging(value);
-					this.SendPropertyChanging();
-					this._UserFTP = value;
-					this.SendPropertyChanged("UserFTP");
-					this.OnUserFTPChanged();
-				}
-			}
-		}
-
-		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage = "_PassFTP", DbType = "NVarChar(150)")]
-		public string PassFTP
-		{
-			get
-			{
-				return this._PassFTP;
-			}
-			set
-			{
-				if ((this._PassFTP != value))
-				{
-					this.OnPassFTPChanging(value);
-					this.SendPropertyChanging();
-					this._PassFTP = value;
-					this.SendPropertyChanged("PassFTP");
-					this.OnPassFTPChanged();
-				}
-			}
-		}
-
-		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage = "_DirectorioFTP", DbType = "NVarChar(150)")]
-		public string DirectorioFTP
-		{
-			get
-			{
-				return this._DirectorioFTP;
-			}
-			set
-			{
-				if ((this._DirectorioFTP != value))
-				{
-					this.OnDirectorioFTPChanging(value);
-					this.SendPropertyChanging();
-					this._DirectorioFTP = value;
-					this.SendPropertyChanged("DirectorioFTP");
-					this.OnDirectorioFTPChanged();
-				}
-			}
-		}
-
-		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage = "_FTPSeguro", DbType = "Bit")]
-		public System.Nullable<bool> FTPSeguro
-		{
-			get
-			{
-				return this._FTPSeguro;
-			}
-			set
-			{
-				if ((this._FTPSeguro != value))
-				{
-					this.OnFTPSeguroChanging(value);
-					this.SendPropertyChanging();
-					this._FTPSeguro = value;
-					this.SendPropertyChanged("FTPSeguro");
-					this.OnFTPSeguroChanged();
-				}
-			}
-		}
-
-		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage = "_Puerto", DbType = "NVarChar(150)")]
-		public string Puerto
-		{
-			get
-			{
-				return this._Puerto;
-			}
-			set
-			{
-				if ((this._Puerto != value))
-				{
-					this.OnPuertoChanging(value);
-					this.SendPropertyChanging();
-					this._Puerto = value;
-					this.SendPropertyChanged("Puerto");
-					this.OnPuertoChanged();
-				}
-			}
-		}
-
-		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage = "_AdjuntarArchivo", DbType = "Bit")]
-		public System.Nullable<bool> AdjuntarArchivo
-		{
-			get
-			{
-				return this._AdjuntarArchivo;
-			}
-			set
-			{
-				if ((this._AdjuntarArchivo != value))
-				{
-					this.OnAdjuntarArchivoChanging(value);
-					this.SendPropertyChanging();
-					this._AdjuntarArchivo = value;
-					this.SendPropertyChanged("AdjuntarArchivo");
-					this.OnAdjuntarArchivoChanged();
-				}
-			}
-		}
-
-		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage = "_EnvioPDF", DbType = "NVarChar(150)")]
-		public string EnvioPDF
-		{
-			get
-			{
-				return this._EnvioPDF;
-			}
-			set
-			{
-				if ((this._EnvioPDF != value))
-				{
-					this.OnEnvioPDFChanging(value);
-					this.SendPropertyChanging();
-					this._EnvioPDF = value;
-					this.SendPropertyChanged("EnvioPDF");
-					this.OnEnvioPDFChanged();
-				}
-			}
-		}
-
-		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage = "_ModoActivo", DbType = "Bit")]
-		public System.Nullable<bool> ModoActivo
-		{
-			get
-			{
-				return this._ModoActivo;
-			}
-			set
-			{
-				if ((this._ModoActivo != value))
-				{
-					this.OnModoActivoChanging(value);
-					this.SendPropertyChanging();
-					this._ModoActivo = value;
-					this.SendPropertyChanged("ModoActivo");
-					this.OnModoActivoChanged();
-				}
-			}
-		}
-
-		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage = "_iRegistroConfigOrigen", DbType = "Int")]
+		
+		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_iRegistroConfigOrigen", DbType="Int")]
 		public System.Nullable<int> iRegistroConfigOrigen
 		{
 			get
@@ -9733,61 +9356,28 @@ namespace ABCFTPOracle
 				}
 			}
 		}
-
-		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage = "_bFANASA", DbType = "Bit")]
-		public System.Nullable<bool> bFANASA
+		
+		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_DestinoRespaldo", DbType="NVarChar(150)")]
+		public string DestinoRespaldo
 		{
 			get
 			{
-				return this._bFANASA;
+				return this._DestinoRespaldo;
 			}
 			set
 			{
-				if ((this._bFANASA != value))
+				if ((this._DestinoRespaldo != value))
 				{
-					this.OnbFANASAChanging(value);
+					this.OnDestinoRespaldoChanging(value);
 					this.SendPropertyChanging();
-					this._bFANASA = value;
-					this.SendPropertyChanged("bFANASA");
-					this.OnbFANASAChanged();
+					this._DestinoRespaldo = value;
+					this.SendPropertyChanged("DestinoRespaldo");
+					this.OnDestinoRespaldoChanged();
 				}
 			}
 		}
-
-		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage = "_bFESA", DbType = "Bit")]
-		public System.Nullable<bool> bFESA
-		{
-			get
-			{
-				return this._bFESA;
-			}
-			set
-			{
-				if ((this._bFESA != value))
-				{
-					this.OnbFESAChanging(value);
-					this.SendPropertyChanging();
-					this._bFESA = value;
-					this.SendPropertyChanged("bFESA");
-					this.OnbFESAChanged();
-				}
-			}
-		}
-
-		[global::System.Data.Linq.Mapping.AssociationAttribute(Name = "OrigenDatosClientesFANASA_CtlCorreosClientesFANASA", Storage = "_CtlCorreosClientesFANASA", ThisKey = "IdOrigenDatos", OtherKey = "IdOrigenDatosClientesFANASA")]
-		public EntitySet<CtlCorreosClientesFANASA> CtlCorreosClientesFANASA
-		{
-			get
-			{
-				return this._CtlCorreosClientesFANASA;
-			}
-			set
-			{
-				this._CtlCorreosClientesFANASA.Assign(value);
-			}
-		}
-
-		[global::System.Data.Linq.Mapping.AssociationAttribute(Name = "ConfiguracionOrigen3WM_OrigenDatosClientesFANASA", Storage = "_ConfiguracionOrigenClientesFANASA", ThisKey = "iRegistroConfigOrigen", OtherKey = "uiRegistroOrigen", IsForeignKey = true)]
+		
+		[global::System.Data.Linq.Mapping.AssociationAttribute(Name="ConfiguracionOrigenClientesFANASA_OrigenDatosClientesFANASA", Storage="_ConfiguracionOrigenClientesFANASA", ThisKey="iRegistroConfigOrigen", OtherKey="uiRegistroOrigen", IsForeignKey=true)]
 		public ConfiguracionOrigenClientesFANASA ConfiguracionOrigenClientesFANASA
 		{
 			get
@@ -9797,7 +9387,7 @@ namespace ABCFTPOracle
 			set
 			{
 				ConfiguracionOrigenClientesFANASA previousValue = this._ConfiguracionOrigenClientesFANASA.Entity;
-				if (((previousValue != value)
+				if (((previousValue != value) 
 							|| (this._ConfiguracionOrigenClientesFANASA.HasLoadedOrAssignedValue == false)))
 				{
 					this.SendPropertyChanging();
@@ -9820,11 +9410,11 @@ namespace ABCFTPOracle
 				}
 			}
 		}
-
+		
 		public event PropertyChangingEventHandler PropertyChanging;
-
+		
 		public event PropertyChangedEventHandler PropertyChanged;
-
+		
 		protected virtual void SendPropertyChanging()
 		{
 			if ((this.PropertyChanging != null))
@@ -9832,257 +9422,292 @@ namespace ABCFTPOracle
 				this.PropertyChanging(this, emptyChangingEventArgs);
 			}
 		}
-
+		
 		protected virtual void SendPropertyChanged(String propertyName)
 		{
 			if ((this.PropertyChanged != null))
 			{
 				this.PropertyChanged(this, new PropertyChangedEventArgs(propertyName));
 			}
-		}
-
-		private void attach_CtlCorreosClientesFANASA(CtlCorreosClientesFANASA entity)
-		{
-			this.SendPropertyChanging();
-			entity.OrigenDatosClientesFANASA = this;
-		}
-
-		private void detach_CtlCorreosClientesFANASA(CtlCorreosClientesFANASA entity)
-		{
-			this.SendPropertyChanging();
-			entity.OrigenDatosClientesFANASA = null;
 		}
 	}
-
-	[global::System.Data.Linq.Mapping.TableAttribute(Name = "dbo.ConfiguracionOrigenClientesFANASA")]
-	public partial class ConfiguracionOrigenClientesFANASA : INotifyPropertyChanging, INotifyPropertyChanged
+	
+	[global::System.Data.Linq.Mapping.TableAttribute(Name="dbo.CtlCorreosClientesFANASA")]
+	public partial class CtlCorreosClientesFANASA
 	{
-
-		private static PropertyChangingEventArgs emptyChangingEventArgs = new PropertyChangingEventArgs(String.Empty);
-
-		private int _uiRegistroOrigen;
-
-		private string _sOrigen;
-
-		private string _sCorreo;
-
-		private string _sDestinatario;
-
-		private string _sAsunto;
-
-		private string _sDireccionIP;
-
-		private System.Nullable<int> _iPuerto;
-
-		private string _sPassword;
-
-		private EntitySet<OrigenDatosClientesFANASA> _OrigenDatosClientesFANASA;
-
-		#region Definiciones de métodos de extensibilidad ClientesFANASA
-		partial void OnLoaded();
-		partial void OnValidate(System.Data.Linq.ChangeAction action);
-		partial void OnCreated();
-		partial void OnuiRegistroOrigenChanging(int value);
-		partial void OnuiRegistroOrigenChanged();
-		partial void OnsOrigenChanging(string value);
-		partial void OnsOrigenChanged();
-		partial void OnsCorreoChanging(string value);
-		partial void OnsCorreoChanged();
-		partial void OnsDestinatarioChanging(string value);
-		partial void OnsDestinatarioChanged();
-		partial void OnsAsuntoChanging(string value);
-		partial void OnsAsuntoChanged();
-		partial void OnsDireccionIPChanging(string value);
-		partial void OnsDireccionIPChanged();
-		partial void OniPuertoChanging(System.Nullable<int> value);
-		partial void OniPuertoChanged();
-		partial void OnsPasswordChanging(string value);
-		partial void OnsPasswordChanged();
-		#endregion
-
-		public ConfiguracionOrigenClientesFANASA()
+		
+		private System.Nullable<int> _idCorreos;
+		
+		private System.Nullable<int> _IdOrigenDatosClientesFANASA;
+		
+		private string _Correo;
+		
+		public CtlCorreosClientesFANASA()
 		{
-			this._OrigenDatosClientesFANASA = new EntitySet<OrigenDatosClientesFANASA>(new Action<OrigenDatosClientesFANASA>(this.attach_OrigenDatosClientesFANASA), new Action<OrigenDatosClientesFANASA>(this.detach_OrigenDatosClientesFANASA));
+		}
+		
+		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_idCorreos", DbType="Int")]
+		public System.Nullable<int> idCorreos
+		{
+			get
+			{
+				return this._idCorreos;
+			}
+			set
+			{
+				if ((this._idCorreos != value))
+				{
+					this._idCorreos = value;
+				}
+			}
+		}
+		
+		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_IdOrigenDatosClientesFANASA", DbType="Int")]
+		public System.Nullable<int> IdOrigenDatosClientesFANASA
+		{
+			get
+			{
+				return this._IdOrigenDatosClientesFANASA;
+			}
+			set
+			{
+				if ((this._IdOrigenDatosClientesFANASA != value))
+				{
+					this._IdOrigenDatosClientesFANASA = value;
+				}
+			}
+		}
+		
+		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_Correo", DbType="NVarChar(250)")]
+		public string Correo
+		{
+			get
+			{
+				return this._Correo;
+			}
+			set
+			{
+				if ((this._Correo != value))
+				{
+					this._Correo = value;
+				}
+			}
+		}
+	}
+	
+	[global::System.Data.Linq.Mapping.TableAttribute(Name="dbo.LogClientesFANASA")]
+	public partial class LogClientesFANASA : INotifyPropertyChanging, INotifyPropertyChanged
+	{
+		
+		private static PropertyChangingEventArgs emptyChangingEventArgs = new PropertyChangingEventArgs(String.Empty);
+		
+		private string _idLog;
+		
+		private string _Titulo;
+		
+		private string _ArchivoClientesFANASA;
+		
+		private string _DestinoOneDrive;
+		
+		private string _DestinoFTP;
+		
+		private string _Estatus;
+		
+		private string _DescripcionError;
+		
+		private System.Nullable<System.DateTime> _Fecha;
+		
+    #region Definiciones de métodos de extensibilidad
+    partial void OnLoaded();
+    partial void OnValidate(System.Data.Linq.ChangeAction action);
+    partial void OnCreated();
+    partial void OnidLogChanging(string value);
+    partial void OnidLogChanged();
+    partial void OnTituloChanging(string value);
+    partial void OnTituloChanged();
+    partial void OnArchivoClientesFANASAChanging(string value);
+    partial void OnArchivoClientesFANASAChanged();
+    partial void OnDestinoOneDriveChanging(string value);
+    partial void OnDestinoOneDriveChanged();
+    partial void OnDestinoFTPChanging(string value);
+    partial void OnDestinoFTPChanged();
+    partial void OnEstatusChanging(string value);
+    partial void OnEstatusChanged();
+    partial void OnDescripcionErrorChanging(string value);
+    partial void OnDescripcionErrorChanged();
+    partial void OnFechaChanging(System.Nullable<System.DateTime> value);
+    partial void OnFechaChanged();
+    #endregion
+		
+		public LogClientesFANASA()
+		{
 			OnCreated();
 		}
-
-		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage = "_uiRegistroOrigen", AutoSync = AutoSync.OnInsert, DbType = "Int NOT NULL IDENTITY", IsPrimaryKey = true, IsDbGenerated = true)]
-		public int uiRegistroOrigen
+		
+		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_idLog", DbType="NVarChar(200) NOT NULL", CanBeNull=false, IsPrimaryKey=true)]
+		public string idLog
 		{
 			get
 			{
-				return this._uiRegistroOrigen;
+				return this._idLog;
 			}
 			set
 			{
-				if ((this._uiRegistroOrigen != value))
+				if ((this._idLog != value))
 				{
-					this.OnuiRegistroOrigenChanging(value);
+					this.OnidLogChanging(value);
 					this.SendPropertyChanging();
-					this._uiRegistroOrigen = value;
-					this.SendPropertyChanged("uiRegistroOrigen");
-					this.OnuiRegistroOrigenChanged();
+					this._idLog = value;
+					this.SendPropertyChanged("idLog");
+					this.OnidLogChanged();
 				}
 			}
 		}
-
-		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage = "_sOrigen", DbType = "VarChar(250)")]
-		public string sOrigen
+		
+		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_Titulo", DbType="NVarChar(250)")]
+		public string Titulo
 		{
 			get
 			{
-				return this._sOrigen;
+				return this._Titulo;
 			}
 			set
 			{
-				if ((this._sOrigen != value))
+				if ((this._Titulo != value))
 				{
-					this.OnsOrigenChanging(value);
+					this.OnTituloChanging(value);
 					this.SendPropertyChanging();
-					this._sOrigen = value;
-					this.SendPropertyChanged("sOrigen");
-					this.OnsOrigenChanged();
+					this._Titulo = value;
+					this.SendPropertyChanged("Titulo");
+					this.OnTituloChanged();
 				}
 			}
 		}
-
-		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage = "_sCorreo", DbType = "VarChar(250)")]
-		public string sCorreo
+		
+		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_ArchivoClientesFANASA", DbType="NVarChar(250)")]
+		public string ArchivoClientesFANASA
 		{
 			get
 			{
-				return this._sCorreo;
+				return this._ArchivoClientesFANASA;
 			}
 			set
 			{
-				if ((this._sCorreo != value))
+				if ((this._ArchivoClientesFANASA != value))
 				{
-					this.OnsCorreoChanging(value);
+					this.OnArchivoClientesFANASAChanging(value);
 					this.SendPropertyChanging();
-					this._sCorreo = value;
-					this.SendPropertyChanged("sCorreo");
-					this.OnsCorreoChanged();
+					this._ArchivoClientesFANASA = value;
+					this.SendPropertyChanged("ArchivoClientesFANASA");
+					this.OnArchivoClientesFANASAChanged();
 				}
 			}
 		}
-
-		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage = "_sDestinatario", DbType = "VarChar(250)")]
-		public string sDestinatario
+		
+		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_DestinoOneDrive", DbType="NVarChar(250)")]
+		public string DestinoOneDrive
 		{
 			get
 			{
-				return this._sDestinatario;
+				return this._DestinoOneDrive;
 			}
 			set
 			{
-				if ((this._sDestinatario != value))
+				if ((this._DestinoOneDrive != value))
 				{
-					this.OnsDestinatarioChanging(value);
+					this.OnDestinoOneDriveChanging(value);
 					this.SendPropertyChanging();
-					this._sDestinatario = value;
-					this.SendPropertyChanged("sDestinatario");
-					this.OnsDestinatarioChanged();
+					this._DestinoOneDrive = value;
+					this.SendPropertyChanged("DestinoOneDrive");
+					this.OnDestinoOneDriveChanged();
 				}
 			}
 		}
-
-		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage = "_sAsunto", DbType = "VarChar(250)")]
-		public string sAsunto
+		
+		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_DestinoFTP", DbType="NVarChar(250)")]
+		public string DestinoFTP
 		{
 			get
 			{
-				return this._sAsunto;
+				return this._DestinoFTP;
 			}
 			set
 			{
-				if ((this._sAsunto != value))
+				if ((this._DestinoFTP != value))
 				{
-					this.OnsAsuntoChanging(value);
+					this.OnDestinoFTPChanging(value);
 					this.SendPropertyChanging();
-					this._sAsunto = value;
-					this.SendPropertyChanged("sAsunto");
-					this.OnsAsuntoChanged();
+					this._DestinoFTP = value;
+					this.SendPropertyChanged("DestinoFTP");
+					this.OnDestinoFTPChanged();
 				}
 			}
 		}
-
-		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage = "_sDireccionIP", DbType = "VarChar(250)")]
-		public string sDireccionIP
+		
+		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_Estatus", DbType="NVarChar(250)")]
+		public string Estatus
 		{
 			get
 			{
-				return this._sDireccionIP;
+				return this._Estatus;
 			}
 			set
 			{
-				if ((this._sDireccionIP != value))
+				if ((this._Estatus != value))
 				{
-					this.OnsDireccionIPChanging(value);
+					this.OnEstatusChanging(value);
 					this.SendPropertyChanging();
-					this._sDireccionIP = value;
-					this.SendPropertyChanged("sDireccionIP");
-					this.OnsDireccionIPChanged();
+					this._Estatus = value;
+					this.SendPropertyChanged("Estatus");
+					this.OnEstatusChanged();
 				}
 			}
 		}
-
-		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage = "_iPuerto", DbType = "Int")]
-		public System.Nullable<int> iPuerto
+		
+		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_DescripcionError", DbType="NVarChar(1550)")]
+		public string DescripcionError
 		{
 			get
 			{
-				return this._iPuerto;
+				return this._DescripcionError;
 			}
 			set
 			{
-				if ((this._iPuerto != value))
+				if ((this._DescripcionError != value))
 				{
-					this.OniPuertoChanging(value);
+					this.OnDescripcionErrorChanging(value);
 					this.SendPropertyChanging();
-					this._iPuerto = value;
-					this.SendPropertyChanged("iPuerto");
-					this.OniPuertoChanged();
+					this._DescripcionError = value;
+					this.SendPropertyChanged("DescripcionError");
+					this.OnDescripcionErrorChanged();
 				}
 			}
 		}
-
-		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage = "_sPassword", DbType = "VarChar(250)")]
-		public string sPassword
+		
+		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_Fecha", DbType="DateTime")]
+		public System.Nullable<System.DateTime> Fecha
 		{
 			get
 			{
-				return this._sPassword;
+				return this._Fecha;
 			}
 			set
 			{
-				if ((this._sPassword != value))
+				if ((this._Fecha != value))
 				{
-					this.OnsPasswordChanging(value);
+					this.OnFechaChanging(value);
 					this.SendPropertyChanging();
-					this._sPassword = value;
-					this.SendPropertyChanged("sPassword");
-					this.OnsPasswordChanged();
+					this._Fecha = value;
+					this.SendPropertyChanged("Fecha");
+					this.OnFechaChanged();
 				}
 			}
 		}
-
-		[global::System.Data.Linq.Mapping.AssociationAttribute(Name = "ConfiguracionOrigenClientesFANASA_OrigenDatosClientesFANASA", Storage = "_OrigenDatosClientesFANASA", ThisKey = "uiRegistroOrigen", OtherKey = "iRegistroConfigOrigen")]
-		public EntitySet<OrigenDatosClientesFANASA> OrigenDatosClientesFANASA
-		{
-			get
-			{
-				return this._OrigenDatosClientesFANASA;
-			}
-			set
-			{
-				this._OrigenDatosClientesFANASA.Assign(value);
-			}
-		}
-
+		
 		public event PropertyChangingEventHandler PropertyChanging;
-
+		
 		public event PropertyChangedEventHandler PropertyChanged;
-
+		
 		protected virtual void SendPropertyChanging()
 		{
 			if ((this.PropertyChanging != null))
@@ -10090,25 +9715,13 @@ namespace ABCFTPOracle
 				this.PropertyChanging(this, emptyChangingEventArgs);
 			}
 		}
-
+		
 		protected virtual void SendPropertyChanged(String propertyName)
 		{
 			if ((this.PropertyChanged != null))
 			{
 				this.PropertyChanged(this, new PropertyChangedEventArgs(propertyName));
 			}
-		}
-
-		private void attach_OrigenDatosClientesFANASA(OrigenDatosClientesFANASA entity)
-		{
-			this.SendPropertyChanging();
-			entity.ConfiguracionOrigenClientesFANASA = this;
-		}
-
-		private void detach_OrigenDatosClientesFANASA(OrigenDatosClientesFANASA entity)
-		{
-			this.SendPropertyChanging();
-			entity.ConfiguracionOrigenClientesFANASA = null;
 		}
 	}
 }

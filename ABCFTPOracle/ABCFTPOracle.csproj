@@ -173,10 +173,20 @@
       <DesignTime>True</DesignTime>
       <DependentUpon>EnvioFTPOracleDataSet.xsd</DependentUpon>
     </Compile>
+    <Compile Include="EnvioFTPOracleDataSet1.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>EnvioFTPOracleDataSet1.xsd</DependentUpon>
+    </Compile>
     <Compile Include="EnvioFTPOracleDataSetRenov.Designer.cs">
       <AutoGen>True</AutoGen>
       <DesignTime>True</DesignTime>
       <DependentUpon>EnvioFTPOracleDataSetRenov.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="EnvioOracleV2.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>EnvioOracleV2.xsd</DependentUpon>
     </Compile>
     <Compile Include="Etiquetas.cs">
       <SubType>Form</SubType>
@@ -378,6 +388,17 @@
     <None Include="EnvioFTPOracleDataSet.xss">
       <DependentUpon>EnvioFTPOracleDataSet.xsd</DependentUpon>
     </None>
+    <None Include="EnvioFTPOracleDataSet1.xsc">
+      <DependentUpon>EnvioFTPOracleDataSet1.xsd</DependentUpon>
+    </None>
+    <None Include="EnvioFTPOracleDataSet1.xsd">
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>EnvioFTPOracleDataSet1.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="EnvioFTPOracleDataSet1.xss">
+      <DependentUpon>EnvioFTPOracleDataSet1.xsd</DependentUpon>
+    </None>
     <None Include="EnvioFTPOracleDataSetRenov.xsc">
       <DependentUpon>EnvioFTPOracleDataSetRenov.xsd</DependentUpon>
     </None>
@@ -388,6 +409,17 @@
     </None>
     <None Include="EnvioFTPOracleDataSetRenov.xss">
       <DependentUpon>EnvioFTPOracleDataSetRenov.xsd</DependentUpon>
+    </None>
+    <None Include="EnvioOracleV2.xsc">
+      <DependentUpon>EnvioOracleV2.xsd</DependentUpon>
+    </None>
+    <None Include="EnvioOracleV2.xsd">
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>EnvioOracleV2.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="EnvioOracleV2.xss">
+      <DependentUpon>EnvioOracleV2.xsd</DependentUpon>
     </None>
     <None Include="FtpOracleRenovado.xsc">
       <DependentUpon>FtpOracleRenovado.xsd</DependentUpon>
