@@ -265,6 +265,12 @@
     <Compile Include="OrigenCarvajalFESA.Designer.cs">
       <DependentUpon>OrigenCarvajalFESA.cs</DependentUpon>
     </Compile>
+    <Compile Include="OrigenClientesFANASA.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="OrigenClientesFANASA.Designer.cs">
+      <DependentUpon>OrigenClientesFANASA.cs</DependentUpon>
+    </Compile>
     <Compile Include="OrigenEtiquetas.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -348,6 +354,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="OrigenCarvajalFESA.resx">
       <DependentUpon>OrigenCarvajalFESA.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="OrigenClientesFANASA.resx">
+      <DependentUpon>OrigenClientesFANASA.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="OrigenEtiquetas.resx">
       <DependentUpon>OrigenEtiquetas.cs</DependentUpon>

@@ -42,14 +42,14 @@
     </dependentAssembly>
   </dependency>
   <dependency>
-    <dependentAssembly dependencyType="install" allowDelayedBinding="true" codebase="ABCFTPOracle.exe" size="4292096">
+    <dependentAssembly dependencyType="install" allowDelayedBinding="true" codebase="ABCFTPOracle.exe" size="4311552">
       <assemblyIdentity name="ABCFTPOracle" version="1.0.0.0" language="neutral" processorArchitecture="msil" />
       <hash>
         <dsig:Transforms>
           <dsig:Transform Algorithm="urn:schemas-microsoft-com:HashTransforms.Identity" />
         </dsig:Transforms>
         <dsig:DigestMethod Algorithm="http://www.w3.org/2000/09/xmldsig#sha256" />
-        <dsig:DigestValue>6FXO0rbC4oXwN7TweprbssVSmlbWyfvaiztgBQsG8bc=</dsig:DigestValue>
+        <dsig:DigestValue>Oygzp9g7XegzPmDccVdTDz7OI9ke9Kz+yySa7LUbhi4=</dsig:DigestValue>
       </hash>
     </dependentAssembly>
   </dependency>
