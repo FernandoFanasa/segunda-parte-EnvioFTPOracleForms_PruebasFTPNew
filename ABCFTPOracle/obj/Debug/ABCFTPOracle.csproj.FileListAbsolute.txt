@@ -143,3 +143,4 @@ C:\Proyectos\ABCFTPOracle\ABCFTPOracle\obj\Debug\ABCFTPOracle.application
 C:\Proyectos\ABCFTPOracle\ABCFTPOracle\obj\Debug\ABCFTPOracle.exe
 C:\Proyectos\ABCFTPOracle\ABCFTPOracle\obj\Debug\ABCFTPOracle.pdb
 C:\Proyectos\ABCFTPOracle\ABCFTPOracle\obj\Debug\ABCFTPOracle.OrigenClientesFANASA.resources
+C:\Proyectos\ABCFTPOracle\ABCFTPOracle\obj\Debug\ABCFTPOracle.CorreosClientesFANASA.resources

@@ -106,6 +106,12 @@ namespace ABCFTPOracle
             OrigenClientesFANASA OrigenClientesFANASA = new OrigenClientesFANASA();
             OrigenClientesFANASA.Show();
         }
+        private void correosClientesFANASAToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            this.Hide();
+            CorreosClientesFANASA correosFANASA = new CorreosClientesFANASA();
+            correosFANASA.Show();
+        }
         private void salisToolStripMenuItem_Click_1(object sender, EventArgs e)
         {
             this.Close();
@@ -354,6 +360,5 @@ namespace ABCFTPOracle
                 }
             }
         }
-
     }
 }

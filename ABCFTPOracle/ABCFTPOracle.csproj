@@ -145,6 +145,12 @@
     <Compile Include="CorreosCarvajalFESA.Designer.cs">
       <DependentUpon>CorreosCarvajalFESA.cs</DependentUpon>
     </Compile>
+    <Compile Include="CorreosClientesFANASA.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="CorreosClientesFANASA.Designer.cs">
+      <DependentUpon>CorreosClientesFANASA.cs</DependentUpon>
+    </Compile>
     <Compile Include="CorreosEtiquetas.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -309,6 +315,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="CorreosCarvajalFESA.resx">
       <DependentUpon>CorreosCarvajalFESA.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="CorreosClientesFANASA.resx">
+      <DependentUpon>CorreosClientesFANASA.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="CorreosEtiquetas.resx">
       <DependentUpon>CorreosEtiquetas.cs</DependentUpon>

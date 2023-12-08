@@ -315,6 +315,7 @@
             this.Controls.Add(this.dataGridViewOrigenClientes);
             this.Controls.Add(this.label13);
             this.Controls.Add(this.menuStrip1);
+            this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.Name = "OrigenClientesFANASA";
             this.Text = "OrigenClientesFANASA";
             this.Load += new System.EventHandler(this.OrigenClientesFANASA_Load);

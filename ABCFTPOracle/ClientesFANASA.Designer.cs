@@ -33,6 +33,7 @@ namespace ABCFTPOracle
             this.menuStrip2 = new System.Windows.Forms.MenuStrip();
             this.menuToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.menúInicialToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.origenFANASAToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.salisToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.label1Titulo = new System.Windows.Forms.Label();
             this.dataGridViewClientesFANASA = new System.Windows.Forms.DataGridView();
@@ -54,7 +55,7 @@ namespace ABCFTPOracle
             this.comboBoxOrigen = new System.Windows.Forms.ComboBox();
             this.label17Config_Origen = new System.Windows.Forms.Label();
             this.lblID2 = new System.Windows.Forms.Label();
-            this.origenFANASAToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.correosClientesFANASAToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.menuStrip2.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridViewClientesFANASA)).BeginInit();
             this.SuspendLayout();
@@ -74,6 +75,7 @@ namespace ABCFTPOracle
             this.menuToolStripMenuItem.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
             this.menúInicialToolStripMenuItem,
             this.origenFANASAToolStripMenuItem,
+            this.correosClientesFANASAToolStripMenuItem,
             this.salisToolStripMenuItem});
             this.menuToolStripMenuItem.Name = "menuToolStripMenuItem";
             this.menuToolStripMenuItem.Size = new System.Drawing.Size(50, 20);
@@ -82,14 +84,21 @@ namespace ABCFTPOracle
             // menúInicialToolStripMenuItem
             // 
             this.menúInicialToolStripMenuItem.Name = "menúInicialToolStripMenuItem";
-            this.menúInicialToolStripMenuItem.Size = new System.Drawing.Size(157, 22);
+            this.menúInicialToolStripMenuItem.Size = new System.Drawing.Size(207, 22);
             this.menúInicialToolStripMenuItem.Text = "Menu Inicial";
             this.menúInicialToolStripMenuItem.Click += new System.EventHandler(this.menúInicialToolStripMenuItem_Click_1);
+            // 
+            // origenFANASAToolStripMenuItem
+            // 
+            this.origenFANASAToolStripMenuItem.Name = "origenFANASAToolStripMenuItem";
+            this.origenFANASAToolStripMenuItem.Size = new System.Drawing.Size(207, 22);
+            this.origenFANASAToolStripMenuItem.Text = "Origen FANASA";
+            this.origenFANASAToolStripMenuItem.Click += new System.EventHandler(this.origenFANASAToolStripMenuItem_Click);
             // 
             // salisToolStripMenuItem
             // 
             this.salisToolStripMenuItem.Name = "salisToolStripMenuItem";
-            this.salisToolStripMenuItem.Size = new System.Drawing.Size(157, 22);
+            this.salisToolStripMenuItem.Size = new System.Drawing.Size(207, 22);
             this.salisToolStripMenuItem.Text = "Salir";
             this.salisToolStripMenuItem.Click += new System.EventHandler(this.salisToolStripMenuItem_Click_1);
             // 
@@ -275,12 +284,12 @@ namespace ABCFTPOracle
             this.lblID2.TabIndex = 134;
             this.lblID2.Text = "-";
             // 
-            // origenFANASAToolStripMenuItem
+            // correosClientesFANASAToolStripMenuItem
             // 
-            this.origenFANASAToolStripMenuItem.Name = "origenFANASAToolStripMenuItem";
-            this.origenFANASAToolStripMenuItem.Size = new System.Drawing.Size(157, 22);
-            this.origenFANASAToolStripMenuItem.Text = "Origen FANASA";
-            this.origenFANASAToolStripMenuItem.Click += new System.EventHandler(this.origenFANASAToolStripMenuItem_Click);
+            this.correosClientesFANASAToolStripMenuItem.Name = "correosClientesFANASAToolStripMenuItem";
+            this.correosClientesFANASAToolStripMenuItem.Size = new System.Drawing.Size(207, 22);
+            this.correosClientesFANASAToolStripMenuItem.Text = "Correos Clientes FANASA";
+            this.correosClientesFANASAToolStripMenuItem.Click += new System.EventHandler(this.correosClientesFANASAToolStripMenuItem_Click);
             // 
             // ClientesFANASA
             // 
@@ -346,5 +355,6 @@ namespace ABCFTPOracle
         private System.Windows.Forms.Label label17Config_Origen;
         private System.Windows.Forms.Label lblID2;
         private System.Windows.Forms.ToolStripMenuItem origenFANASAToolStripMenuItem;
+        private System.Windows.Forms.ToolStripMenuItem correosClientesFANASAToolStripMenuItem;
     }
 }
